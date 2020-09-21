@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager gameManager;
 
     public float timerSwitch = 3;
     private float timeLeft;
@@ -16,21 +17,34 @@ public class GameManager : MonoBehaviour
     public List<int> occupiedSpawnPoints;
     public int maxPropsInLevel = 5;
 
+    void Awake()
+    {
+        if (gameManager == null)
+        {
+            gameManager = this;
+            DontDestroyOnLoad(this.gameObject);
+        }
+        else
+        {
+            Destroy(this.gameObject);
+        }        
+    }
+
 
     // Start is called before the first frame update
     void Start()
     {
         timeLeft = timerSwitch;
-        SpawnProps();
+        //SpawnProps();
     }
 
     // Update is called once per frame
     void Update()
     {
-        //if (UpdateTimer())
-        //{
-        //    SwitchColor();
-        //}
+        if (UpdateTimer())
+        {
+            SwitchColor();
+        }
 
         //SpawnProps();
     }
@@ -50,7 +64,10 @@ public class GameManager : MonoBehaviour
     private void SwitchColor()
     {
         objectChange = FindObjectsOfType<ColorChange>();
-        //changeColor.ChangeColorSaleConnard();
+        foreach(ColorChange obj in objectChange)
+        {
+            obj.SwitchColor();
+        }
     }
 
     private void SpawnProps()
@@ -58,7 +75,7 @@ public class GameManager : MonoBehaviour
         int i = 0;
         while (i < maxPropsInLevel)
         {
-            int randomIndex = Random.Range(1, propsSpawnPointsArray.Length);
+            int randomIndex = Random.Range(0, propsSpawnPointsArray.Length);
             if (!occupiedSpawnPoints.Contains(randomIndex))
             {
                 occupiedSpawnPoints.Add(randomIndex);

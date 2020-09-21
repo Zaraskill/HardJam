@@ -43,7 +43,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85da1b8155f269c4d8a149f42d99c83e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timerSwitch: 3
+  timerSwitch: 1.5
+  timeLeft: 0
   colorList:
   - {r: 1, g: 0, b: 0, a: 0}
   - {r: 0, g: 0, b: 1, a: 0}
