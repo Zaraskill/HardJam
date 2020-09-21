@@ -13,8 +13,7 @@ public class GameManager : MonoBehaviour
     public Transform[] propsSpawnPointsArray;
     public GameObject propsToInstantiate;
 
-    public List<Transform> emptySpawnPoints;
-    public List<Transform> occupiedSpawnPoints;
+    public List<int> occupiedSpawnPoints;
     public int maxPropsInLevel = 5;
 
 
@@ -22,17 +21,18 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         timeLeft = timerSwitch;
+        SpawnProps();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (UpdateTimer())
-        {
-            SwitchColor();
-        }
+        //if (UpdateTimer())
+        //{
+        //    SwitchColor();
+        //}
 
-        SpawnProps();
+        //SpawnProps();
     }
 
 
@@ -58,11 +58,11 @@ public class GameManager : MonoBehaviour
         int i = 0;
         while (i < maxPropsInLevel)
         {
-            int randomIndex = Random.Range(1, maxPropsInLevel);
-            if (!occupiedSpawnPoints.Contains(emptySpawnPoints[randomIndex]))
+            int randomIndex = Random.Range(1, propsSpawnPointsArray.Length);
+            if (!occupiedSpawnPoints.Contains(randomIndex))
             {
-                occupiedSpawnPoints.Add(emptySpawnPoints[randomIndex]);
-                Instantiate(propsToInstantiate, emptySpawnPoints[randomIndex].transform.position, Quaternion.identity);
+                occupiedSpawnPoints.Add(randomIndex);
+                Instantiate(propsToInstantiate, propsSpawnPointsArray[randomIndex].transform.position, Quaternion.identity);
                 i++;
             }
         }

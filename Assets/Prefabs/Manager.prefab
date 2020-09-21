@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4046063111689743409
+--- !u!1 &3203806490156865729
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,9 +8,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4046063111689743415}
-  - component: {fileID: 4046063111689743414}
-  - component: {fileID: 3163816022656542159}
+  - component: {fileID: 3203806490156865735}
+  - component: {fileID: 3203806490156865734}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -18,27 +17,27 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4046063111689743415
+--- !u!4 &3203806490156865735
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4046063111689743409}
+  m_GameObject: {fileID: 3203806490156865729}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.1631752, y: 3.3442655, z: -1.7696552}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4046063111689743414
+--- !u!114 &3203806490156865734
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4046063111689743409}
+  m_GameObject: {fileID: 3203806490156865729}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 85da1b8155f269c4d8a149f42d99c83e, type: 3}
@@ -52,26 +51,18 @@ MonoBehaviour:
   - {r: 0.88251936, g: 1, b: 0, a: 0}
   - {r: 1, g: 0, b: 1, a: 0}
   objectChange: []
---- !u!114 &3163816022656542159
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4046063111689743409}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93263f5e0060cda49828db56ece2c001, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sounds: []
-  currentMusic: 
-  Mixer: {fileID: 24100000, guid: e2e5f87b73fd5214188eee7dfb4af47f, type: 2}
-  MusicMixer: {fileID: 1588378475502028137, guid: e2e5f87b73fd5214188eee7dfb4af47f,
-    type: 2}
-  SoundMixer: {fileID: -6901000444396889894, guid: e2e5f87b73fd5214188eee7dfb4af47f,
-    type: 2}
-  musicVolume: 0
-  soundVolume: 0
-  minPitch: 0.8
-  maxPitch: 1.2
+  propsSpawnPointsArray:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  propsToInstantiate: {fileID: 5902761628978566939, guid: 525526e5b3fc90c49abff3b1e6522569,
+    type: 3}
+  occupiedSpawnPoints: 
+  maxPropsInLevel: 5
