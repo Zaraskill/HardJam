@@ -12,6 +12,8 @@ public class GameManager : MonoBehaviour
     public List<int> occupiedSpawnPoints;
     public int maxPropsInLevel = 5;
 
+    public GameObject plateauTournant;
+
     void Awake()
     {
         if (gameManager == null)
@@ -48,7 +50,8 @@ public class GameManager : MonoBehaviour
             if (!occupiedSpawnPoints.Contains(randomIndex))
             {
                 occupiedSpawnPoints.Add(randomIndex);
-                Instantiate(propsToInstantiate, propsSpawnPointsArray[randomIndex].transform.position, Quaternion.identity);
+                GameObject instance = Instantiate(propsToInstantiate, propsSpawnPointsArray[randomIndex].transform.position, Quaternion.identity);
+                instance.transform.SetParent(plateauTournant.transform);
                 i++;
             }
         }
