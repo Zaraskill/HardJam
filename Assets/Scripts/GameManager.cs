@@ -10,6 +10,13 @@ public class GameManager : MonoBehaviour
     public List<Color> colorList;
     [HideInInspector] public ColorChange[] objectChange;
 
+    public Transform[] propsSpawnPointsArray;
+    public GameObject propsToInstantiate;
+
+    public List<Transform> emptySpawnPoints;
+    public List<Transform> occupiedSpawnPoints;
+    public int maxPropsInLevel = 5;
+
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +31,8 @@ public class GameManager : MonoBehaviour
         {
             SwitchColor();
         }
+
+        SpawnProps();
     }
 
 
@@ -42,5 +51,20 @@ public class GameManager : MonoBehaviour
     {
         objectChange = FindObjectsOfType<ColorChange>();
         //changeColor.ChangeColorSaleConnard();
+    }
+
+    private void SpawnProps()
+    {
+        int i = 0;
+        while (i < maxPropsInLevel)
+        {
+            int randomIndex = Random.Range(1, maxPropsInLevel);
+            if (!occupiedSpawnPoints.Contains(emptySpawnPoints[randomIndex]))
+            {
+                occupiedSpawnPoints.Add(emptySpawnPoints[randomIndex]);
+                Instantiate(propsToInstantiate, emptySpawnPoints[randomIndex].transform.position, Quaternion.identity);
+                i++;
+            }
+        }
     }
 }
