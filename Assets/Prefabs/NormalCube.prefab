@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5902761628978566937}
   - component: {fileID: 5902761628978566936}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: NormalCube
   m_TagString: Props
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -106,3 +106,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b32b330efdd2964eaadae49c6ed3a41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isImpostor: 0
+  style: 0
+  size: {x: 0, y: 0, z: 0}
+  speedTime: 1.5
+  colorList:
+  - {r: 1, g: 0, b: 0, a: 0}
+  - {r: 0, g: 0, b: 1, a: 0}
+  - {r: 0, g: 1, b: 0, a: 0}
+  - {r: 1, g: 1, b: 0, a: 0}
+  - {r: 1, g: 0, b: 1, a: 0}

@@ -6,11 +6,6 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager gameManager;
 
-    public float timerSwitch = 3;
-    private float timeLeft;
-    public List<Color> colorList;
-    [HideInInspector] public ColorChange[] objectChange;
-
     public Transform[] propsSpawnPointsArray;
     public GameObject propsToInstantiate;
 
@@ -34,40 +29,14 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        timeLeft = timerSwitch;
-        //SpawnProps();
+        SpawnProps();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (UpdateTimer())
-        {
-            SwitchColor();
-        }
 
         //SpawnProps();
-    }
-
-
-    private bool UpdateTimer()
-    {
-        timeLeft -= Time.deltaTime;
-        if (timeLeft <= 0)
-        {
-            timeLeft = timerSwitch;
-            return true;
-        }
-        return false;
-    }
-
-    private void SwitchColor()
-    {
-        objectChange = FindObjectsOfType<ColorChange>();
-        foreach(ColorChange obj in objectChange)
-        {
-            obj.SwitchColor();
-        }
     }
 
     private void SpawnProps()
