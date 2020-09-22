@@ -18,8 +18,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Eyes_black
-    second: {fileID: -3521497729627914948, guid: a9d0fc7964d1b4a48b194ab29779e401,
-      type: 3}
+    second: {fileID: 2100000, guid: fe23297bdebf6da468b1fd6d4b9b83ac, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
