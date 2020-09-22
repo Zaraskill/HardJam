@@ -19,7 +19,8 @@ public class GameManager : MonoBehaviour
     [Header("Timer")]
     public float roundTime = 15f;
     [SerializeField] private float _roundTimeLeft;
-
+    public float gameTime = 90f;
+    [SerializeField] private float _gameTimeLeft;
     void Awake()
     {
         if (gameManager == null)
@@ -38,6 +39,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         _roundTimeLeft = roundTime;
+        _gameTimeLeft = gameTime;
         SpawnProps();
     }
 
@@ -82,6 +84,15 @@ public class GameManager : MonoBehaviour
             return true;
         }
         return false;
+    }
+
+    private void GameTimer()
+    {
+        _gameTimeLeft -= Time.deltaTime;
+        if(_gameTimeLeft <= 0)
+        {
+            // Fin de partie
+        }
     }
 
     private void NextRound()
