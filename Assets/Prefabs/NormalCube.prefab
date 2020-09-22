@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5902761628978566950}
   - component: {fileID: 5902761628978566937}
   - component: {fileID: 5902761628978566936}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: NormalCube
   m_TagString: Props
   m_Icon: {fileID: 0}
