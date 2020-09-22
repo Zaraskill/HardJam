@@ -16,6 +16,10 @@ public class GameManager : MonoBehaviour
 
     public GameObject plateauTournant;
 
+    [Header("Timer")]
+    public float roundTime = 15f;
+    [SerializeField] private float _timeLeft;
+
     void Awake()
     {
         if (gameManager == null)
@@ -33,14 +37,18 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        _timeLeft = roundTime;
         SpawnProps();
     }
 
     // Update is called once per frame
     void Update()
     {
-
         //SpawnProps();
+        if (RoundTimer())
+        {
+            NextRound();
+        }
     }
 
     private void SpawnProps()
@@ -63,6 +71,22 @@ public class GameManager : MonoBehaviour
                 i++;
             }
         }
+    }
+
+    private bool RoundTimer()
+    {
+        _timeLeft -= Time.deltaTime;
+        if(_timeLeft <= 0)
+        {
+            _timeLeft = roundTime;
+            return true;
+        }
+        return false;
+    }
+
+    private void NextRound()
+    {
+
     }
 }
 
