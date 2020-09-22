@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
 
     [Header("Timer")]
     public float roundTime = 15f;
-    [SerializeField] private float _timeLeft;
+    [SerializeField] private float _roundTimeLeft;
 
     void Awake()
     {
@@ -37,7 +37,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _timeLeft = roundTime;
+        _roundTimeLeft = roundTime;
         SpawnProps();
     }
 
@@ -75,10 +75,10 @@ public class GameManager : MonoBehaviour
 
     private bool RoundTimer()
     {
-        _timeLeft -= Time.deltaTime;
-        if(_timeLeft <= 0)
+        _roundTimeLeft -= Time.deltaTime;
+        if(_roundTimeLeft <= 0)
         {
-            _timeLeft = roundTime;
+            _roundTimeLeft = roundTime;
             return true;
         }
         return false;
