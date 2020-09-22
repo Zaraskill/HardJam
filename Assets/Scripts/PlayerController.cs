@@ -24,6 +24,12 @@ public class PlayerController : MonoBehaviour
     public LayerMask layerMask;
     public float moveSpeedValue;
 
+    [Header("Player UI")]
+    public Text hitText;
+
+    //Test
+    int a = 0;
+
     // Start is called before the first frame update
     private void Start()
     {
@@ -45,7 +51,6 @@ public class PlayerController : MonoBehaviour
 
     private void CursorMovement()
     {
-
         float horizontal = 0;
         horizontal = inputPlayer.GetAxis("HorizontalMove");
         float vertical = 0;
@@ -79,22 +84,18 @@ public class PlayerController : MonoBehaviour
 
     private void CursorRaycast()
     {
+        var mainCam = GameManager.instance.mainCamera;
 
-        if (Physics.SphereCast(cursor.transform.position, raduisSphereCast, cursor.transform.TransformDirection(Vector3.forward), out hit, Mathf.Infinity, layerMask))
+        if (Physics.SphereCast(mainCam.transform.localPosition, raduisSphereCast, (cursor.transform.position - mainCam.transform.position).normalized, out hit, Mathf.Infinity, layerMask))
         {
-//#if UNITY_EDITOR
-//            Debug.DrawRay(cursor.transform.position, cursor.transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
-//            Debug.Log("Did Hit : " + hit.collider.gameObject.name + "" + _PlayerId);
-//#endif
+            a++;
+            hitText.text = "Player " + _PlayerId + " touche " + hit.transform.gameObject.name + a;
         }
-        else
-        {
 
 //#if UNITY_EDITOR
-//            Debug.DrawRay(cursor.transform.position, cursor.transform.TransformDirection(Vector3.forward) * 1000, Color.white);
-//            Debug.Log("Did not Hit " + _PlayerId);
+//        Debug.DrawRay(mainCam.transform.localPosition, (cursor.transform.position - mainCam.transform.position).normalized * 100000f, Color.yellow, 0.5f);
+//        Debug.Break();
 //#endif
-        }
     }
 
 #if UNITY_EDITOR

@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager gameManager;
+    public static GameManager instance;
 
     public Transform[] propsSpawnPointsArray;
     public GameObject propsToInstantiate;
     public List<int> occupiedSpawnPoints;
     public int maxPropsInLevel = 5;
+
+    [Header("Camera")]
+    public Camera mainCamera;
 
     [Header("Different Props")]
     public List<Props> differentProps;
@@ -23,9 +26,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] private float _gameTimeLeft;
     void Awake()
     {
-        if (gameManager == null)
+        if (instance == null)
         {
-            gameManager = this;
+            instance = this;
             DontDestroyOnLoad(this.gameObject);
         }
         else
