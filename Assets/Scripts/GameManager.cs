@@ -8,9 +8,11 @@ public class GameManager : MonoBehaviour
 
     public Transform[] propsSpawnPointsArray;
     public GameObject propsToInstantiate;
-
     public List<int> occupiedSpawnPoints;
     public int maxPropsInLevel = 5;
+
+    [Header("Different Props")]
+    public List<Props> differentProps;
 
     public GameObject plateauTournant;
 
@@ -43,17 +45,25 @@ public class GameManager : MonoBehaviour
 
     private void SpawnProps()
     {
-        int i = 0;
+        int family = Random.Range(0, differentProps.Capacity);
+        int randomIndex = Random.Range(0, propsSpawnPointsArray.Length);
+        occupiedSpawnPoints.Add(randomIndex);
+        GameObject instance = Instantiate(differentProps[family].impostorProps[Random.Range(0, differentProps[family].impostorProps.Capacity)], propsSpawnPointsArray[randomIndex].transform.position, Quaternion.identity);
+        instance.transform.SetParent(plateauTournant.transform);
+
+        int i = 1;
         while (i < maxPropsInLevel)
         {
-            int randomIndex = Random.Range(0, propsSpawnPointsArray.Length);
+            randomIndex = Random.Range(0, propsSpawnPointsArray.Length);
             if (!occupiedSpawnPoints.Contains(randomIndex))
             {
                 occupiedSpawnPoints.Add(randomIndex);
-                GameObject instance = Instantiate(propsToInstantiate, propsSpawnPointsArray[randomIndex].transform.position, Quaternion.identity);
+                instance = Instantiate(differentProps[family].normalProps[Random.Range(0, differentProps[family].normalProps.Capacity)] , propsSpawnPointsArray[randomIndex].transform.position, Quaternion.identity);
                 instance.transform.SetParent(plateauTournant.transform);
                 i++;
             }
         }
     }
 }
+
+
