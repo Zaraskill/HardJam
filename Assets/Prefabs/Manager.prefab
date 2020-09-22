@@ -43,15 +43,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85da1b8155f269c4d8a149f42d99c83e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timerSwitch: 1.5
-  timeLeft: 0
-  colorList:
-  - {r: 1, g: 0, b: 0, a: 0}
-  - {r: 0, g: 0, b: 1, a: 0}
-  - {r: 0, g: 1, b: 0, a: 0}
-  - {r: 0.88251936, g: 1, b: 0, a: 0}
-  - {r: 1, g: 0, b: 1, a: 0}
-  objectChange: []
   propsSpawnPointsArray:
   - {fileID: 0}
   - {fileID: 0}
@@ -67,3 +58,13 @@ MonoBehaviour:
     type: 3}
   occupiedSpawnPoints: 
   maxPropsInLevel: 5
+  mainCamera: {fileID: 0}
+  differentProps: []
+  instanceLevels:
+  - {fileID: 3812068917498774869, guid: 379ccb4cd8197b94bb3495d146038fb8, type: 3}
+  - {fileID: 8084047057655524003, guid: 7af69bd622d799d4684b5c6c88e859bd, type: 3}
+  plateauTournant: {fileID: 0}
+  roundTime: 15
+  _roundTimeLeft: 0
+  gameTime: 90
+  _gameTimeLeft: 0

@@ -16,8 +16,10 @@ public class GameManager : MonoBehaviour
 
     [Header("Different Props")]
     public List<Props> differentProps;
+    public List<GameObject> instanceLevels;
 
     public GameObject plateauTournant;
+    [SerializeField]  private GameObject instanceLevel;
 
     [Header("Timer")]
     public float roundTime = 15f;
@@ -44,6 +46,7 @@ public class GameManager : MonoBehaviour
         _roundTimeLeft = roundTime;
         _gameTimeLeft = gameTime;
         SpawnProps();
+        instanceLevel = Instantiate(instanceLevels[0], plateauTournant.transform);
     }
 
     // Update is called once per frame
@@ -100,7 +103,10 @@ public class GameManager : MonoBehaviour
 
     private void NextRound()
     {
-
+        GameObject objToInstantiate = instanceLevels[instanceLevels.FindIndex(x => instanceLevel) + 1];
+        Destroy(instanceLevel.gameObject);
+        instanceLevel = objToInstantiate;
+        Instantiate(instanceLevel, plateauTournant.transform);
     }
 }
 
