@@ -21,6 +21,11 @@ public class GameManager : MonoBehaviour
     [SerializeField] private float _roundTimeLeft;
     public float gameTime = 90f;
     [SerializeField] private float _gameTimeLeft;
+
+    [Header("Score")]
+    private float _scoreJ1 = 0;
+    private float _scoreJ2 = 0;
+
     void Awake()
     {
         if (gameManager == null)
@@ -91,7 +96,23 @@ public class GameManager : MonoBehaviour
         _gameTimeLeft -= Time.deltaTime;
         if(_gameTimeLeft <= 0)
         {
-            // Fin de partie
+            if (_scoreJ1 > _scoreJ2)
+            {
+                // J1 gagne
+                // Display des scores
+                // Retour au menu
+            }
+            else if (_scoreJ1 < _scoreJ2)
+            {
+                // J2 gagne
+                // Display des scores
+                // Retour au menu
+            }
+            else
+            {
+                // Mort subite, on refait un round
+                NextRound();
+            }
         }
     }
 
