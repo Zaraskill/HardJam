@@ -19,8 +19,12 @@ public class GameManager : MonoBehaviour
     public List<Props> differentProps;
     public List<GameObject> instanceLevels;
 
+    [Header("Patterns Colors")]
+    public List<Colors> patterns;
+    private int randomPattern;
+
     public GameObject plateauTournant;
-    [SerializeField]  private GameObject instanceLevel;
+    private GameObject instanceLevel;
 
     [Header("Timer")]
     public float roundTime = 15f;
@@ -67,8 +71,8 @@ public class GameManager : MonoBehaviour
             NextRound();
         }
 
-        scoreTextJ1.text = score1.ToString();
-        scoreTextJ2.text = score2.ToString();
+        //scoreTextJ1.text = score1.ToString();
+        //scoreTextJ2.text = score2.ToString();
     }
 
     private void SpawnProps()
@@ -126,10 +130,16 @@ public class GameManager : MonoBehaviour
 
     private void NextRound()
     {
-        GameObject objToInstantiate = instanceLevels[instanceLevels.FindIndex(x => instanceLevel) + 1];
+        GameObject objToInstantiate = instanceLevels[Random.Range(0, instanceLevels.Capacity)];
+        randomPattern = Random.Range(0, patterns.Capacity);
         Destroy(instanceLevel.gameObject);
         instanceLevel = objToInstantiate;
         Instantiate(instanceLevel, plateauTournant.transform);
+    }
+
+    public int GetRandomPattern()
+    {
+        return randomPattern;
     }
 }
 

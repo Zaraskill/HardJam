@@ -9,13 +9,22 @@ public class ColorChange : MonoBehaviour
     public Vector3 size;
     public float speedTime;
     private float speedLeft;
-    public List<Color> colorList;
+    private List<Color> colorList;
 
     private int color;
     private Material material;
     // Start is called before the first frame update
     void Start()
     {
+        if (isImpostor)
+        {
+            colorList = GameManager.instance.patterns[GameManager.instance.GetRandomPattern()].impostorColors;
+        }
+        else
+        {
+            colorList = GameManager.instance.patterns[GameManager.instance.GetRandomPattern()].normalColors;
+        }
+
         speedLeft = speedTime;
         if (style == ImpostorStyle.Size)
         {
