@@ -221,10 +221,20 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 963194227}
+    - target: {fileID: 551815370805477125, guid: c982a0326a6c80a478acfd99cd66d633,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 1577082526709079130, guid: c982a0326a6c80a478acfd99cd66d633,
         type: 3}
       propertyPath: m_Name
       value: UI_Players
+      objectReference: {fileID: 0}
+    - target: {fileID: 1577082526709079130, guid: c982a0326a6c80a478acfd99cd66d633,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6948100429802693795, guid: c982a0326a6c80a478acfd99cd66d633,
         type: 3}
@@ -378,7 +388,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0.8
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -824,7 +834,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 612ebb492ccc9f94bb99fb1161500043, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 0.35
+  rotationSpeed: 0.25
 --- !u!65 &1431882624
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -894,7 +904,7 @@ Transform:
   m_GameObject: {fileID: 1431882622}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -1.87, z: 8.9}
-  m_LocalScale: {x: 10, y: 1, z: 10}
+  m_LocalScale: {x: 19.36, y: 1.936, z: 19.36}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
