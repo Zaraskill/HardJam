@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -26,6 +27,14 @@ public class GameManager : MonoBehaviour
     [SerializeField] private float _roundTimeLeft;
     public float gameTime = 90f;
     [SerializeField] private float _gameTimeLeft;
+
+    //Test
+    [Header("Score")]
+    public int score1 = 0;
+    public int score2 = 0;
+    public Text scoreTextJ1;
+    public Text scoreTextJ2;
+
     void Awake()
     {
         if (instance == null)
@@ -57,6 +66,9 @@ public class GameManager : MonoBehaviour
         {
             NextRound();
         }
+
+        scoreTextJ1.text = score1.ToString();
+        scoreTextJ2.text = score2.ToString();
     }
 
     private void SpawnProps()
@@ -97,7 +109,18 @@ public class GameManager : MonoBehaviour
         _gameTimeLeft -= Time.deltaTime;
         if(_gameTimeLeft <= 0)
         {
-            // Fin de partie
+            if (score1 > score2)
+            {
+
+            }
+            else if (score1 < score2)
+            {
+
+            }
+            else
+            {
+
+            }
         }
     }
 
