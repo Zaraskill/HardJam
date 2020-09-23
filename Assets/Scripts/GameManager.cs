@@ -59,7 +59,7 @@ public class GameManager : MonoBehaviour
         _roundTimeLeft = roundTime;
         _gameTimeLeft = gameTime;
         SpawnProps();
-        instanceLevel = Instantiate(instanceLevels[0], plateauTournant.transform);
+        instanceLevel = Instantiate(instanceLevels[Random.Range(0, instanceLevels.Capacity)], plateauTournant.transform);
     }
 
     // Update is called once per frame
