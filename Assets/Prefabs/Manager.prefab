@@ -59,12 +59,24 @@ MonoBehaviour:
   occupiedSpawnPoints: 
   maxPropsInLevel: 5
   mainCamera: {fileID: 0}
-  differentProps: []
+  differentProps:
+  - normalProps:
+    - {fileID: 4443195503248912068, guid: efd64ff69cba8b441bcd3d96cbc18fb0, type: 3}
+    impostorProps:
+    - {fileID: 4443195503248912068, guid: 80a939fa7edfbb54c9f486720b49805a, type: 3}
   instanceLevels:
   - {fileID: 3812068917498774869, guid: 379ccb4cd8197b94bb3495d146038fb8, type: 3}
   - {fileID: 8084047057655524003, guid: 7af69bd622d799d4684b5c6c88e859bd, type: 3}
+  - {fileID: 5004350840154901398, guid: 5297de8bb903a37408011ead676b0980, type: 3}
+  - {fileID: 8566353702363567404, guid: 5008cbf8d4ce3fd4e8cd59609237acba, type: 3}
+  patterns:
+  - {fileID: 11400000, guid: 538e13bdff4ed0f4788e9b4b9e65ddd3, type: 2}
   plateauTournant: {fileID: 0}
   roundTime: 15
   _roundTimeLeft: 0
   gameTime: 90
   _gameTimeLeft: 0
+  score1: 0
+  score2: 0
+  scoreTextJ1: {fileID: 0}
+  scoreTextJ2: {fileID: 0}
