@@ -328,7 +328,7 @@ MonoBehaviour:
   isImpostor: 0
   style: 0
   size: {x: 0, y: 0, z: 0}
-  speedTime: 1.5
+  speedTime: 1
   materials:
   - {fileID: 3967589344873796595}
   - {fileID: 6653740907942084796}

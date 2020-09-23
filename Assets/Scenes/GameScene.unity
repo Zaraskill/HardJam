@@ -221,20 +221,10 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 963194227}
-    - target: {fileID: 551815370805477125, guid: c982a0326a6c80a478acfd99cd66d633,
-        type: 3}
-      propertyPath: m_Layer
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 1577082526709079130, guid: c982a0326a6c80a478acfd99cd66d633,
         type: 3}
       propertyPath: m_Name
       value: UI_Players
-      objectReference: {fileID: 0}
-    - target: {fileID: 1577082526709079130, guid: c982a0326a6c80a478acfd99cd66d633,
-        type: 3}
-      propertyPath: m_Layer
-      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6948100429802693795, guid: c982a0326a6c80a478acfd99cd66d633,
         type: 3}
@@ -617,8 +607,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   backgroundColorList:
-  - {r: 1, g: 0.6401813, b: 0, a: 0}
-  - {r: 1, g: 0.4077799, b: 0, a: 0}
+  - {r: 0.8509804, g: 0.44313726, b: 0.5294118, a: 0}
+  - {r: 0.6901961, g: 0.2901961, b: 0.45882353, a: 0}
   timerSwitch: 1
 --- !u!114 &963194230
 MonoBehaviour:
@@ -772,6 +762,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1188842117 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1366452577028994464, guid: c982a0326a6c80a478acfd99cd66d633,
+    type: 3}
+  m_PrefabInstance: {fileID: 442621301}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1311921051
 GameObject:
   m_ObjectHideFlags: 0
@@ -1184,6 +1186,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3203806490156865734, guid: 59071b81d80c25441b4ae989e7312c80,
         type: 3}
+      propertyPath: differentProps.Array.data[0].impostorProps.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3203806490156865734, guid: 59071b81d80c25441b4ae989e7312c80,
+        type: 3}
       propertyPath: propsSpawnPointsArray.Array.data[0]
       value: 
       objectReference: {fileID: 837399893}
@@ -1252,6 +1259,64 @@ PrefabInstance:
       propertyPath: scoreTextJ2
       value: 
       objectReference: {fileID: 442621305}
+    - target: {fileID: 3203806490156865734, guid: 59071b81d80c25441b4ae989e7312c80,
+        type: 3}
+      propertyPath: timerBar
+      value: 
+      objectReference: {fileID: 1188842117}
+    - target: {fileID: 3203806490156865734, guid: 59071b81d80c25441b4ae989e7312c80,
+        type: 3}
+      propertyPath: differentProps.Array.data[0].impostorProps.Array.data[4]
+      value: 
+      objectReference: {fileID: 68078186675178493, guid: 1a3d7427a133fa44c93b0a5da13ef754,
+        type: 3}
+    - target: {fileID: 3203806490156865734, guid: 59071b81d80c25441b4ae989e7312c80,
+        type: 3}
+      propertyPath: differentProps.Array.data[0].impostorProps.Array.data[5]
+      value: 
+      objectReference: {fileID: 68078186675178493, guid: 68620825e96e7c746be94f329a9e96bc,
+        type: 3}
+    - target: {fileID: 3203806490156865734, guid: 59071b81d80c25441b4ae989e7312c80,
+        type: 3}
+      propertyPath: differentProps.Array.data[0].impostorProps.Array.data[6]
+      value: 
+      objectReference: {fileID: 172461772635031678, guid: 2c5270cfa4f809940b9c878788dd9e55,
+        type: 3}
+    - target: {fileID: 3203806490156865734, guid: 59071b81d80c25441b4ae989e7312c80,
+        type: 3}
+      propertyPath: differentProps.Array.data[0].impostorProps.Array.data[7]
+      value: 
+      objectReference: {fileID: 172461772635031678, guid: 8015cdf078e4c444bbf35061268513ed,
+        type: 3}
+    - target: {fileID: 3203806490156865734, guid: 59071b81d80c25441b4ae989e7312c80,
+        type: 3}
+      propertyPath: differentProps.Array.data[0].impostorProps.Array.data[0]
+      value: 
+      objectReference: {fileID: 4443195503248912068, guid: 7c16b854083eb1e459ec26ef1ba33d8c,
+        type: 3}
+    - target: {fileID: 3203806490156865734, guid: 59071b81d80c25441b4ae989e7312c80,
+        type: 3}
+      propertyPath: differentProps.Array.data[0].impostorProps.Array.data[1]
+      value: 
+      objectReference: {fileID: 4443195503248912068, guid: 50309b60af8bb4e47af1344bf3f61a47,
+        type: 3}
+    - target: {fileID: 3203806490156865734, guid: 59071b81d80c25441b4ae989e7312c80,
+        type: 3}
+      propertyPath: differentProps.Array.data[0].impostorProps.Array.data[2]
+      value: 
+      objectReference: {fileID: 8339329539177893683, guid: adb56867635f45045b5013f3c2f39539,
+        type: 3}
+    - target: {fileID: 3203806490156865734, guid: 59071b81d80c25441b4ae989e7312c80,
+        type: 3}
+      propertyPath: differentProps.Array.data[0].impostorProps.Array.data[3]
+      value: 
+      objectReference: {fileID: 8339329539177893683, guid: a23a85d17ddb9544dadf5b34c8169216,
+        type: 3}
+    - target: {fileID: 3203806490156865734, guid: 59071b81d80c25441b4ae989e7312c80,
+        type: 3}
+      propertyPath: roundTime
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 3203806490156865735, guid: 59071b81d80c25441b4ae989e7312c80,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1391,6 +1456,18 @@ PrefabInstance:
       propertyPath: crosshairUI
       value: 
       objectReference: {fileID: 551815369027012368}
+    - target: {fileID: 7778182781239028570, guid: 7e4faed6462c6e94a8138885cac5e140,
+        type: 3}
+      propertyPath: hitParticleNormal
+      value: 
+      objectReference: {fileID: 1005815332700790, guid: 0af96e15318cda2419fb095df72adbde,
+        type: 3}
+    - target: {fileID: 7778182781239028570, guid: 7e4faed6462c6e94a8138885cac5e140,
+        type: 3}
+      propertyPath: hitParticleImpostor
+      value: 
+      objectReference: {fileID: 1408611368167110, guid: c7a3af311ddec934d8fbece25f6aa7c8,
+        type: 3}
     - target: {fileID: 7778182781513456968, guid: 7e4faed6462c6e94a8138885cac5e140,
         type: 3}
       propertyPath: cursor
@@ -1406,5 +1483,17 @@ PrefabInstance:
       propertyPath: crosshairUI
       value: 
       objectReference: {fileID: 551815369481261155}
+    - target: {fileID: 7778182781513456968, guid: 7e4faed6462c6e94a8138885cac5e140,
+        type: 3}
+      propertyPath: hitParticleNormal
+      value: 
+      objectReference: {fileID: 1005815332700790, guid: 0af96e15318cda2419fb095df72adbde,
+        type: 3}
+    - target: {fileID: 7778182781513456968, guid: 7e4faed6462c6e94a8138885cac5e140,
+        type: 3}
+      propertyPath: hitParticleImpostor
+      value: 
+      objectReference: {fileID: 1408611368167110, guid: c7a3af311ddec934d8fbece25f6aa7c8,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e4faed6462c6e94a8138885cac5e140, type: 3}

@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 3727624099082493003}
   - component: {fileID: 7953319151511555948}
   m_Layer: 9
-  m_Name: Character_d Impostor
+  m_Name: Character_d Impostor 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -150,9 +150,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isImpostor: 1
-  style: 1
+  style: 0
   size: {x: 0, y: 0, z: 0}
-  speedTime: 1
+  speedTime: 1.5
   materials:
   - {fileID: 436568030865987528}
   - {fileID: 4129697968949390629}

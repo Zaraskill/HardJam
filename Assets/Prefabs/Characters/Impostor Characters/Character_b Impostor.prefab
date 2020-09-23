@@ -912,7 +912,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isImpostor: 1
-  style: 0
+  style: 1
   size: {x: 0, y: 0, z: 0}
   speedTime: 1
   materials:
