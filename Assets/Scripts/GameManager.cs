@@ -31,6 +31,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private float _roundTimeLeft;
     public float gameTime = 90f;
     [SerializeField] private float _gameTimeLeft;
+    public Image timerBar;
 
     //Test
     [Header("Score")]
@@ -70,7 +71,7 @@ public class GameManager : MonoBehaviour
         {
             NextRound();
         }
-
+        
         //scoreTextJ1.text = score1.ToString();
         //scoreTextJ2.text = score2.ToString();
     }
@@ -100,7 +101,9 @@ public class GameManager : MonoBehaviour
     private bool RoundTimer()
     {
         _roundTimeLeft -= Time.deltaTime;
-        if(_roundTimeLeft <= 0)
+        timerBar.fillAmount = _roundTimeLeft / roundTime;
+        timerBar.color = Color.Lerp(Color.red, Color.green, timerBar.fillAmount);
+        if (_roundTimeLeft <= 0)
         {
             _roundTimeLeft = roundTime;
             return true;
