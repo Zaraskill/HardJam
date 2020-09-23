@@ -79,10 +79,17 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 538e13bdff4ed0f4788e9b4b9e65ddd3, type: 2}
   plateauTournant: {fileID: 0}
   roundTime: 15
-  _roundTimeLeft: 0
   gameTime: 90
-  _gameTimeLeft: 0
+  timerBar: {fileID: 0}
   score1: 0
   score2: 0
   scoreTextJ1: {fileID: 0}
   scoreTextJ2: {fileID: 0}
+  bgColorsList:
+  - {fileID: 11400000, guid: fc01aa9f25f159e4b87f085e9e73578e, type: 2}
+  - {fileID: 11400000, guid: 8af04e21913086644a3d0e43dd524152, type: 2}
+  - {fileID: 11400000, guid: 2278dffe2fcdb35448fd051f640a59e9, type: 2}
+  - {fileID: 11400000, guid: 76c24cb1465f5d34992453ed5d6f7b4d, type: 2}
+  - {fileID: 11400000, guid: 9a9bee26f51e57f46a63d480abd4a17e, type: 2}
+  - {fileID: 11400000, guid: 67800a24801a1d349b83bc59930c1a38, type: 2}
+  - {fileID: 11400000, guid: 2da7bcef647103b4b97dc9ea06a16f22, type: 2}

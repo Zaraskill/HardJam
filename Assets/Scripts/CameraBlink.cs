@@ -9,6 +9,7 @@ public class CameraBlink : MonoBehaviour
     private float _timeLeft;
 
     Camera cam;
+    private int colorIndex;
 
     // Start is called before the first frame update
     void Start()
@@ -29,13 +30,13 @@ public class CameraBlink : MonoBehaviour
 
     void SwitchBackgroundColor()
     {
-        if(cam.backgroundColor == backgroundColorList[1])
+        if(cam.backgroundColor == backgroundColorList[0])
         {
-            cam.backgroundColor = backgroundColorList[0];
+            cam.backgroundColor = backgroundColorList[1];
         }
         else
         {
-            cam.backgroundColor = backgroundColorList[1];
+            cam.backgroundColor = backgroundColorList[0];
         }
     }
 

@@ -40,6 +40,10 @@ public class GameManager : MonoBehaviour
     public Text scoreTextJ1;
     public Text scoreTextJ2;
 
+    [Header("Background Color")]
+    public List<BackgroundColors> bgColorsList;
+    private int colorIndex = 0;
+
     void Awake()
     {
         if (instance == null)
@@ -140,6 +144,14 @@ public class GameManager : MonoBehaviour
         instanceLevel = Instantiate(objToInstantiate, plateauTournant.transform);
         DestroyProps();
         SpawnProps();
+
+        colorIndex++;
+        if(colorIndex >= bgColorsList.Capacity)
+        {
+            colorIndex = 0;
+        }
+        Camera.main.backgroundColor = bgColorsList[colorIndex].backgroundColors[0];
+        Camera.main.GetComponent<CameraBlink>().backgroundColorList = bgColorsList[colorIndex].backgroundColors;
     }
 
     private void DestroyProps()
