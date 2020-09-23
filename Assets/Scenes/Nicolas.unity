@@ -765,6 +765,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enceinte
       objectReference: {fileID: 0}
+    - target: {fileID: 945357371620327302, guid: 2e90eb755f19a11468c7aeb5b8c42a0f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e90eb755f19a11468c7aeb5b8c42a0f, type: 3}
 --- !u!1001 &442621301
