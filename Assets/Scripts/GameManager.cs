@@ -128,14 +128,27 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void NextRound()
+    public void NextRound()
     {
+        DespawnProps();
+        _roundTimeLeft = roundTime;
         GameObject objToInstantiate = instanceLevels[Random.Range(0, instanceLevels.Capacity)];
         randomPattern = Random.Range(0, patterns.Capacity);
         Destroy(instanceLevel.gameObject);
         instanceLevel = objToInstantiate;
         Instantiate(instanceLevel, plateauTournant.transform);
+        SpawnProps();
     }
+
+    private void DespawnProps()
+    {
+        ColorChange[] props = FindObjectsOfType<ColorChange>();
+        foreach(ColorChange prop in props)
+        {
+            Destroy(prop.gameObject);
+        }
+    }
+
 
     public int GetRandomPattern()
     {
