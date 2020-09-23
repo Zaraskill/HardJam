@@ -16,9 +16,9 @@ public class ColorChange : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (isImpostor)
+        if (isImpostor && style == ImpostorStyle.Color)
         {
-            colorList = GameManager.instance.patterns[GameManager.instance.GetRandomPattern()].impostorColors;
+            colorList = GameManager.instance.patterns[GameManager.instance.GetRandomPattern()].impostorColors;            
         }
         else
         {
