@@ -134,6 +134,7 @@ public class GameManager : MonoBehaviour
     public void NextRound()
     {
         GameObject objToInstantiate = instanceLevels[Random.Range(0, instanceLevels.Capacity)];
+        _roundTimeLeft = roundTime;
         randomPattern = Random.Range(0, patterns.Capacity);
         Destroy(instanceLevel.gameObject);
         instanceLevel = Instantiate(objToInstantiate, plateauTournant.transform);
