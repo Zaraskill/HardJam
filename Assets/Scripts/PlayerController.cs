@@ -113,6 +113,7 @@ public class PlayerController : MonoBehaviour
                 score++;
 
                 hitText.text = "Player " + _PlayerId + " score : " + score;
+                GameManager.instance.NextRound();
 
             }
             else
