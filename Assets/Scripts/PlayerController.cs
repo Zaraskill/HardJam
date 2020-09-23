@@ -31,8 +31,8 @@ public class PlayerController : MonoBehaviour
     [Header("Player UI")]
     public Text hitText;
     public Image crosshairUI;
-    public GameObject hitParticleNormal;
-    public GameObject hitParticleImpostor;
+    public GameObject hitParticleNormal; //hitball2 in Ultimate VFX package
+    public GameObject hitParticleImpostor; //spark_twinkle in Ultimate VFX package
 
     // Start is called before the first frame update
     private void Start()

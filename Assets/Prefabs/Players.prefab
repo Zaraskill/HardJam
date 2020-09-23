@@ -90,6 +90,10 @@ MonoBehaviour:
   score: 0
   hitText: {fileID: 0}
   crosshairUI: {fileID: 0}
+  hitParticleNormal: {fileID: 1005815332700790, guid: 0af96e15318cda2419fb095df72adbde,
+    type: 3}
+  hitParticleImpostor: {fileID: 1408611368167110, guid: c7a3af311ddec934d8fbece25f6aa7c8,
+    type: 3}
 --- !u!1 &7778182781513456974
 GameObject:
   m_ObjectHideFlags: 0
@@ -148,3 +152,7 @@ MonoBehaviour:
   score: 0
   hitText: {fileID: 0}
   crosshairUI: {fileID: 0}
+  hitParticleNormal: {fileID: 1005815332700790, guid: 0af96e15318cda2419fb095df72adbde,
+    type: 3}
+  hitParticleImpostor: {fileID: 1408611368167110, guid: c7a3af311ddec934d8fbece25f6aa7c8,
+    type: 3}
