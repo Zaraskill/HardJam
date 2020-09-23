@@ -23,12 +23,14 @@ public class PlayerController : MonoBehaviour
     [Header("Player Settings")]
     public LayerMask layerMask;
     public float moveSpeedValue;
+    private float cooldownFailHit;
+    public float cooldownFailHitMax;
+    [HideInInspector] public int score;
+    private bool canHit;
 
     [Header("Player UI")]
     public Text hitText;
-
-    //Test
-    int a = 0;
+    public Image crosshairUI;
 
     // Start is called before the first frame update
     private void Start()
@@ -36,14 +38,32 @@ public class PlayerController : MonoBehaviour
         inputPlayer = ReInput.players.GetPlayer(_PlayerId);
 
         hit = new RaycastHit();
+
+        canHit = true;
+        
+        hitText.text = "Player " + _PlayerId + " score : " + score;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (inputPlayer.GetButtonDown("Select"))
+        if (!canHit)
         {
-            CursorRaycast();
+            cooldownFailHit += Time.deltaTime;
+
+            crosshairUI.fillAmount += (cooldownFailHit / cooldownFailHitMax) / 100;
+            if (cooldownFailHit >= cooldownFailHitMax)
+            {
+                cooldownFailHit = 0;
+                canHit = true;
+            }
+        }
+        else
+        {
+            if (inputPlayer.GetButtonDown("Select"))
+            {
+                CursorRaycast();
+            }
         }
 
         CursorMovement();
@@ -88,10 +108,19 @@ public class PlayerController : MonoBehaviour
 
         if (Physics.SphereCast(mainCam.transform.localPosition, raduisSphereCast, (cursor.transform.position - mainCam.transform.position).normalized, out hit, Mathf.Infinity, layerMask))
         {
-            a++;
-            hitText.text = "Player " + _PlayerId + " touche " + hit.transform.gameObject.name + a;
-        }
+            if (hit.transform.gameObject.layer == 9)
+            {
+                score++;
 
+                hitText.text = "Player " + _PlayerId + " score : " + score;
+
+            }
+            else
+            {
+                canHit = false;
+                crosshairUI.fillAmount = 0;
+            }
+        }
 //#if UNITY_EDITOR
 //        Debug.DrawRay(mainCam.transform.localPosition, (cursor.transform.position - mainCam.transform.position).normalized * 100000f, Color.yellow, 0.5f);
 //        Debug.Break();

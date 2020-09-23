@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5634350695677423900}
   - component: {fileID: 5634350695677423907}
   - component: {fileID: 5634350695677423906}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: ImpostorCube
   m_TagString: Impostor
   m_Icon: {fileID: 0}

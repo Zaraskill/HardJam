@@ -84,9 +84,12 @@ MonoBehaviour:
   DownMax: -523
   layerMask:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 768
   moveSpeedValue: 10
+  cooldownFailHitMax: 3
+  score: 0
   hitText: {fileID: 0}
+  crosshairUI: {fileID: 0}
 --- !u!1 &7778182781513456974
 GameObject:
   m_ObjectHideFlags: 0
@@ -139,6 +142,9 @@ MonoBehaviour:
   DownMax: -523
   layerMask:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 768
   moveSpeedValue: 10
+  cooldownFailHitMax: 3
+  score: 0
   hitText: {fileID: 0}
+  crosshairUI: {fileID: 0}
