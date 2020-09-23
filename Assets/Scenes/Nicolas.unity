@@ -698,6 +698,75 @@ Transform:
   m_Father: {fileID: 1154911811}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &417812167
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 456346983058744636, guid: 2e90eb755f19a11468c7aeb5b8c42a0f,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 11.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 456346983058744636, guid: 2e90eb755f19a11468c7aeb5b8c42a0f,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 456346983058744636, guid: 2e90eb755f19a11468c7aeb5b8c42a0f,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.34
+      objectReference: {fileID: 0}
+    - target: {fileID: 456346983058744636, guid: 2e90eb755f19a11468c7aeb5b8c42a0f,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.6598487
+      objectReference: {fileID: 0}
+    - target: {fileID: 456346983058744636, guid: 2e90eb755f19a11468c7aeb5b8c42a0f,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.25416473
+      objectReference: {fileID: 0}
+    - target: {fileID: 456346983058744636, guid: 2e90eb755f19a11468c7aeb5b8c42a0f,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.25416473
+      objectReference: {fileID: 0}
+    - target: {fileID: 456346983058744636, guid: 2e90eb755f19a11468c7aeb5b8c42a0f,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.6598487
+      objectReference: {fileID: 0}
+    - target: {fileID: 456346983058744636, guid: 2e90eb755f19a11468c7aeb5b8c42a0f,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 456346983058744636, guid: 2e90eb755f19a11468c7aeb5b8c42a0f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90.00001
+      objectReference: {fileID: 0}
+    - target: {fileID: 456346983058744636, guid: 2e90eb755f19a11468c7aeb5b8c42a0f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 456346983058744636, guid: 2e90eb755f19a11468c7aeb5b8c42a0f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -42.132004
+      objectReference: {fileID: 0}
+    - target: {fileID: 945357371620327302, guid: 2e90eb755f19a11468c7aeb5b8c42a0f,
+        type: 3}
+      propertyPath: m_Name
+      value: Enceinte
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2e90eb755f19a11468c7aeb5b8c42a0f, type: 3}
 --- !u!1001 &442621301
 PrefabInstance:
   m_ObjectHideFlags: 0
