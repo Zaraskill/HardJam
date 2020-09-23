@@ -72,6 +72,10 @@ MonoBehaviour:
     - {fileID: 68078186675178493, guid: 3c8fe0b73afbd3c49b8ab048d948a24c, type: 3}
     impostorProps:
     - {fileID: 68078186675178493, guid: 68620825e96e7c746be94f329a9e96bc, type: 3}
+  - normalProps:
+    - {fileID: 172461772635031678, guid: c9057b0214f964347af09309859a4268, type: 3}
+    impostorProps:
+    - {fileID: 172461772635031678, guid: 8015cdf078e4c444bbf35061268513ed, type: 3}
   instanceLevels:
   - {fileID: 3812068917498774869, guid: 379ccb4cd8197b94bb3495d146038fb8, type: 3}
   - {fileID: 8084047057655524003, guid: 7af69bd622d799d4684b5c6c88e859bd, type: 3}
