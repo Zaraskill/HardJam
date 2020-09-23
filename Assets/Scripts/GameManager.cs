@@ -28,9 +28,9 @@ public class GameManager : MonoBehaviour
 
     [Header("Timer")]
     public float roundTime = 15f;
-    [SerializeField] private float _roundTimeLeft;
+    private float _roundTimeLeft;
     public float gameTime = 90f;
-    [SerializeField] private float _gameTimeLeft;
+    private float _gameTimeLeft;
     public Image timerBar;
 
     //Test
