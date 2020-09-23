@@ -128,13 +128,12 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void NextRound()
+    public void NextRound()
     {
         GameObject objToInstantiate = instanceLevels[Random.Range(0, instanceLevels.Capacity)];
         randomPattern = Random.Range(0, patterns.Capacity);
         Destroy(instanceLevel.gameObject);
-        instanceLevel = objToInstantiate;
-        Instantiate(instanceLevel, plateauTournant.transform);
+        instanceLevel = Instantiate(objToInstantiate, plateauTournant.transform);
     }
 
     public int GetRandomPattern()
