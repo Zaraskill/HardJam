@@ -31,6 +31,8 @@ public class PlayerController : MonoBehaviour
     [Header("Player UI")]
     public Text hitText;
     public Image crosshairUI;
+    public GameObject hitParticleNormal;
+    public GameObject hitParticleImpostor;
 
     // Start is called before the first frame update
     private void Start()
@@ -114,18 +116,38 @@ public class PlayerController : MonoBehaviour
 
                 hitText.text = "Player " + _PlayerId + " score : " + score;
                 GameManager.instance.NextRound();
-
+                OnHitSomeonePlayThis(true);
             }
             else
             {
                 canHit = false;
                 crosshairUI.fillAmount = 0;
+                OnHitSomeonePlayThis(false);
             }
+
         }
 //#if UNITY_EDITOR
 //        Debug.DrawRay(mainCam.transform.localPosition, (cursor.transform.position - mainCam.transform.position).normalized * 100000f, Color.yellow, 0.5f);
 //        Debug.Break();
 //#endif
+    }
+
+    public void OnHitSomeonePlayThis(bool isImpostor)
+    {
+        if (isImpostor)
+        {
+            GameObject go = Instantiate(hitParticleImpostor, hit.point, Quaternion.identity);
+            go.transform.parent = GameManager.instance.plateauTournant.transform;
+            go.name = hitParticleImpostor.name + "(Clone)";
+            Destroy(go, 2f);
+        }
+        else
+        {
+            GameObject go = Instantiate(hitParticleNormal, hit.point, Quaternion.identity);
+            go.transform.parent = GameManager.instance.plateauTournant.transform;
+            go.name = hitParticleNormal.name + "(Clone)";
+            Destroy(go, 2f);
+        }
     }
 
 #if UNITY_EDITOR
