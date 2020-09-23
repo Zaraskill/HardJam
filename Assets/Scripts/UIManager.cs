@@ -41,7 +41,10 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    public void Toggle
+    public void ToggleScript()
+    {
+
+    }
 
     public void OnClickQuit()
     {

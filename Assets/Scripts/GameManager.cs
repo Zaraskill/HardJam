@@ -138,6 +138,18 @@ public class GameManager : MonoBehaviour
         randomPattern = Random.Range(0, patterns.Capacity);
         Destroy(instanceLevel.gameObject);
         instanceLevel = Instantiate(objToInstantiate, plateauTournant.transform);
+        DestroyProps();
+        SpawnProps();
+    }
+
+    private void DestroyProps()
+    {
+        ColorChange[] props = FindObjectsOfType<ColorChange>();
+        foreach(ColorChange prop in props)
+        {
+            Destroy(prop.gameObject);
+        }
+        occupiedSpawnPoints.Clear();
     }
 
     public int GetRandomPattern()
