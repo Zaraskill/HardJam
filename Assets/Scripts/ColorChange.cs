@@ -12,7 +12,7 @@ public class ColorChange : MonoBehaviour
     private List<Color> colorList;
 
     private int color;
-    private Material material;
+    public List<MeshRenderer> materials;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,8 +31,13 @@ public class ColorChange : MonoBehaviour
             GetComponent<Transform>().localScale = size;
         }
         color = Random.Range(0, colorList.Capacity);
-        material = GetComponent<MeshRenderer>().material;
-        material.color = colorList[color];
+        foreach(MeshRenderer meshRender in materials)
+        {
+            foreach(Material mat in meshRender.materials)
+            {
+                mat.color = colorList[color];
+            }            
+        }
     }
 
     // Update is called once per frame
@@ -54,7 +59,13 @@ public class ColorChange : MonoBehaviour
         {
             color++;
         }
-        material.color = colorList[color];
+        foreach (MeshRenderer meshRender in materials)
+        {
+            foreach (Material mat in meshRender.materials)
+            {
+                mat.color = colorList[color];
+            }
+        }
     }
 
     private bool UpdateTimer()

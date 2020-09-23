@@ -876,26 +876,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3203806490156865734, guid: 59071b81d80c25441b4ae989e7312c80,
         type: 3}
-      propertyPath: differentProps.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3203806490156865734, guid: 59071b81d80c25441b4ae989e7312c80,
-        type: 3}
-      propertyPath: differentProps.Array.data[0].normalProps.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3203806490156865734, guid: 59071b81d80c25441b4ae989e7312c80,
-        type: 3}
-      propertyPath: differentProps.Array.data[0].impostorProps.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3203806490156865734, guid: 59071b81d80c25441b4ae989e7312c80,
-        type: 3}
-      propertyPath: patterns.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3203806490156865734, guid: 59071b81d80c25441b4ae989e7312c80,
-        type: 3}
       propertyPath: propsSpawnPointsArray.Array.data[0]
       value: 
       objectReference: {fileID: 837399893}
@@ -951,34 +931,10 @@ PrefabInstance:
       objectReference: {fileID: 1431882622}
     - target: {fileID: 3203806490156865734, guid: 59071b81d80c25441b4ae989e7312c80,
         type: 3}
-      propertyPath: differentProps.Array.data[0].normalProps.Array.data[0]
-      value: 
-      objectReference: {fileID: 5902761628978566939, guid: 525526e5b3fc90c49abff3b1e6522569,
-        type: 3}
-    - target: {fileID: 3203806490156865734, guid: 59071b81d80c25441b4ae989e7312c80,
-        type: 3}
-      propertyPath: differentProps.Array.data[0].impostorProps.Array.data[0]
-      value: 
-      objectReference: {fileID: 5634350695677423905, guid: ee66ce32d902067408afbd998d7f7957,
-        type: 3}
-    - target: {fileID: 3203806490156865734, guid: 59071b81d80c25441b4ae989e7312c80,
-        type: 3}
-      propertyPath: differentProps.Array.data[0].impostorProps.Array.data[1]
-      value: 
-      objectReference: {fileID: 5634350695677423905, guid: ee66ce32d902067408afbd998d7f7957,
-        type: 3}
-    - target: {fileID: 3203806490156865734, guid: 59071b81d80c25441b4ae989e7312c80,
-        type: 3}
       propertyPath: instanceLevel
       value: 
       objectReference: {fileID: 3812068917498774869, guid: 379ccb4cd8197b94bb3495d146038fb8,
         type: 3}
-    - target: {fileID: 3203806490156865734, guid: 59071b81d80c25441b4ae989e7312c80,
-        type: 3}
-      propertyPath: patterns.Array.data[0]
-      value: 
-      objectReference: {fileID: 11400000, guid: 538e13bdff4ed0f4788e9b4b9e65ddd3,
-        type: 2}
     - target: {fileID: 3203806490156865735, guid: 59071b81d80c25441b4ae989e7312c80,
         type: 3}
       propertyPath: m_LocalPosition.x

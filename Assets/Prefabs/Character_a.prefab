@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2284522224831881781}
   - component: {fileID: 8446546610231192986}
   - component: {fileID: 9141908346484515288}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Character_a_head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59,7 +59,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2c5285dda2b21984c80c497d64d0bfcf, type: 2}
+  - {fileID: 2100000, guid: 79527ce422bfaf34db786f0645aed31c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -89,7 +89,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6014850366639766289}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Character_a_hands
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,7 +104,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 603033850993972556}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0.21148518, z: 0.000000019073486}
+  m_LocalPosition: {x: 0, y: 0.21148518, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1310187545058909629}
@@ -123,7 +123,7 @@ GameObject:
   - component: {fileID: 9079047803478553811}
   - component: {fileID: 7614431887490832184}
   - component: {fileID: 5865405627882549610}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Character_a_leg_right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -170,8 +170,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2c5285dda2b21984c80c497d64d0bfcf, type: 2}
-  - {fileID: 2100000, guid: 2c5285dda2b21984c80c497d64d0bfcf, type: 2}
+  - {fileID: 2100000, guid: 79527ce422bfaf34db786f0645aed31c, type: 2}
+  - {fileID: 2100000, guid: 79527ce422bfaf34db786f0645aed31c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -201,7 +201,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4126431511815580734}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Character_a_eyes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -234,7 +234,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1759796388120445730}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Character_a_full_body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -269,8 +269,7 @@ GameObject:
   - component: {fileID: 3954923982665544830}
   - component: {fileID: 3560112089702953657}
   - component: {fileID: -5182260752884449787}
-  - component: {fileID: -1004105339609781606}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Character_a
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -329,45 +328,14 @@ MonoBehaviour:
   style: 0
   size: {x: 0, y: 0, z: 0}
   speedTime: 1.5
---- !u!23 &-1004105339609781606
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4443195503248912068}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 79527ce422bfaf34db786f0645aed31c, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  materials:
+  - {fileID: 3967589344873796595}
+  - {fileID: 6653740907942084796}
+  - {fileID: 7880486018680716928}
+  - {fileID: 5784692760402895508}
+  - {fileID: 5865405627882549610}
+  - {fileID: 9141908346484515288}
+  - {fileID: 3086654629038919482}
 --- !u!1 &4599370314698998229
 GameObject:
   m_ObjectHideFlags: 0
@@ -379,7 +347,7 @@ GameObject:
   - component: {fileID: 8084200758193957782}
   - component: {fileID: 2370000643716686640}
   - component: {fileID: 7880486018680716928}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Character_a_hand_right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -426,7 +394,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2c5285dda2b21984c80c497d64d0bfcf, type: 2}
+  - {fileID: 2100000, guid: 79527ce422bfaf34db786f0645aed31c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -458,7 +426,7 @@ GameObject:
   - component: {fileID: 4671195148825776068}
   - component: {fileID: 1337726466098843401}
   - component: {fileID: 5784692760402895508}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Character_a_leg_left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -505,8 +473,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2c5285dda2b21984c80c497d64d0bfcf, type: 2}
-  - {fileID: 2100000, guid: 2c5285dda2b21984c80c497d64d0bfcf, type: 2}
+  - {fileID: 2100000, guid: 79527ce422bfaf34db786f0645aed31c, type: 2}
+  - {fileID: 2100000, guid: 79527ce422bfaf34db786f0645aed31c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -538,7 +506,7 @@ GameObject:
   - component: {fileID: 4069280494433040297}
   - component: {fileID: 2522416847256086042}
   - component: {fileID: 3967589344873796595}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Character_a_body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -585,9 +553,9 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2c5285dda2b21984c80c497d64d0bfcf, type: 2}
-  - {fileID: 2100000, guid: 2c5285dda2b21984c80c497d64d0bfcf, type: 2}
-  - {fileID: 2100000, guid: 2c5285dda2b21984c80c497d64d0bfcf, type: 2}
+  - {fileID: 2100000, guid: 79527ce422bfaf34db786f0645aed31c, type: 2}
+  - {fileID: 2100000, guid: 79527ce422bfaf34db786f0645aed31c, type: 2}
+  - {fileID: 2100000, guid: 79527ce422bfaf34db786f0645aed31c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -619,7 +587,7 @@ GameObject:
   - component: {fileID: 1310187545058909629}
   - component: {fileID: 7865842177525789850}
   - component: {fileID: 6653740907942084796}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Character_a_hand_left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -666,7 +634,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2c5285dda2b21984c80c497d64d0bfcf, type: 2}
+  - {fileID: 2100000, guid: 79527ce422bfaf34db786f0645aed31c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -698,7 +666,7 @@ GameObject:
   - component: {fileID: 5434585219807289993}
   - component: {fileID: 3929579382422365977}
   - component: {fileID: 3959135112829432934}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Character_a_eyes_white
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -777,7 +745,7 @@ GameObject:
   - component: {fileID: 5492815824286607289}
   - component: {fileID: 6671242497543664215}
   - component: {fileID: 553841973250859639}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Character_a_eyelashes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -856,7 +824,7 @@ GameObject:
   - component: {fileID: 4220423121226672413}
   - component: {fileID: 5291749486481523160}
   - component: {fileID: 3086654629038919482}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Character_a_hair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -903,7 +871,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2c5285dda2b21984c80c497d64d0bfcf, type: 2}
+  - {fileID: 2100000, guid: 79527ce422bfaf34db786f0645aed31c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -933,7 +901,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5829736676414020266}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Character_a_legs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -967,7 +935,7 @@ GameObject:
   - component: {fileID: 1025201579970327880}
   - component: {fileID: 5537139614167662929}
   - component: {fileID: 7201938959130077448}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Character_a_eyes_black
   m_TagString: Untagged
   m_Icon: {fileID: 0}
