@@ -42,8 +42,8 @@ public class PlayerController : MonoBehaviour
         hit = new RaycastHit();
 
         canHit = true;
-        
-        hitText.text = "Player " + _PlayerId + " score : " + score;
+
+        ScoreUpdateText();
     }
 
     // Update is called once per frame
@@ -53,7 +53,8 @@ public class PlayerController : MonoBehaviour
         {
             cooldownFailHit += Time.deltaTime;
 
-            crosshairUI.fillAmount += (cooldownFailHit / cooldownFailHitMax) / 100;
+            float a = crosshairUI.color.a;
+            //crosshairUI.fillAmount += (cooldownFailHit / cooldownFailHitMax) / 100;
             if (cooldownFailHit >= cooldownFailHitMax)
             {
                 cooldownFailHit = 0;
@@ -114,7 +115,7 @@ public class PlayerController : MonoBehaviour
             {
                 score++;
 
-                hitText.text = "Player " + _PlayerId + " score : " + score;
+                ScoreUpdateText();
                 GameManager.instance.NextRound();
                 OnHitSomeonePlayThis(true);
             }
@@ -147,6 +148,19 @@ public class PlayerController : MonoBehaviour
             go.transform.parent = GameManager.instance.plateauTournant.transform;
             go.name = hitParticleNormal.name + "(Clone)";
             Destroy(go, 2f);
+        }
+    }
+
+    public void ScoreUpdateText()
+    {
+        if (score < 10)
+        {
+            hitText.text = "0" + score;
+        }
+        else
+        {
+
+            hitText.text = score.ToString();
         }
     }
 
