@@ -10,6 +10,8 @@ public class UIManager : MonoBehaviour
 
     public GameObject mainMenu;
     public GameObject optionsMenu;
+    public Slider sliderVolume;
+    public Slider sliderSfx;
     [SerializeField] private Toggle[] toggleList;
 
     void Awake()
@@ -60,5 +62,15 @@ public class UIManager : MonoBehaviour
     public void OnClickQuit()
     {
         Application.Quit();
+    }
+
+    public void SlideVolume()
+    {
+        float valueVolume = sliderVolume.value;
+    }
+
+    public void SlideSfx()
+    {
+        float valueSfx = sliderSfx.value;
     }
 }
