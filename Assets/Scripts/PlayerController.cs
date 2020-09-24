@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Rewired;
+using EZCameraShake;
 
 public class PlayerController : MonoBehaviour
 {
@@ -34,6 +35,12 @@ public class PlayerController : MonoBehaviour
     public Image crosshairUI;
     public GameObject hitParticleNormal; //hitball2 in Ultimate VFX package
     public GameObject hitParticleImpostor; //spark_twinkle in Ultimate VFX package
+
+    [Header("Camera Shaker")]
+    public float magnitude;
+    public float roughness;
+    public float fadeIn;
+    public float fadeOut;
 
     // Start is called before the first frame update
     private void Start()
@@ -118,10 +125,6 @@ public class PlayerController : MonoBehaviour
             }
             else
             {
-                if(score > 0)
-                {
-                    score--;
-                }
                 if (_PlayerId == 0)
                 {
                     players.player2.score++;
@@ -134,6 +137,7 @@ public class PlayerController : MonoBehaviour
                 }
                 //canHit = false;
                 //crosshairUI.fillAmount = 0;
+                CameraShaker.Instance.ShakeOnce(magnitude, roughness, fadeIn, fadeOut);
                 OnHitSomeonePlayThis(false);
             }
             ScoreUpdateText();
