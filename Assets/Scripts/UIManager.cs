@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System;
 using UnityEngine;
+using Rewired;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
@@ -14,9 +15,13 @@ public class UIManager : MonoBehaviour
     public GameObject optionsMenu;
     public Slider sliderVolume;
     public Slider sliderSfx;
-    public GameObject eventSystem;
     public GameObject firstMenu;
     public GameObject firstOption;
+    private IList<Player> listPlayers;
+    public GameObject playButton;
+    public GameObject optButton;
+    public GameObject quitButton;
+
 
     void Awake()
     {
@@ -32,7 +37,44 @@ public class UIManager : MonoBehaviour
 
     private void Start()
     {
+        listPlayers = ReInput.players.AllPlayers;
+    }
 
+    private void Update()
+    {
+        foreach(Player player in listPlayers)
+        {
+            if (player.GetButtonDown("UICancel"))
+            {
+                if (optionsMenu.activeInHierarchy)
+                {
+                    mainMenu.SetActive(true);
+                    optionsMenu.SetActive(false);
+                    EventSystem.current.SetSelectedGameObject(firstMenu);
+                }                
+            }
+        }
+        if (mainMenu.activeInHierarchy)
+        {
+            if(EventSystem.current.currentSelectedGameObject == playButton)
+            {
+                playButton.GetComponent<RectTransform>().localScale = new Vector3(1.2f, 1, 1);
+                optButton.GetComponent<RectTransform>().localScale = new Vector3(1f, 1, 1);
+                quitButton.GetComponent<RectTransform>().localScale = new Vector3(1f, 1, 1);
+            }
+            else if (EventSystem.current.currentSelectedGameObject == optButton)
+            {
+                optButton.GetComponent<RectTransform>().localScale = new Vector3(1.2f, 1, 1);
+                playButton.GetComponent<RectTransform>().localScale = new Vector3(1f, 1, 1);
+                quitButton.GetComponent<RectTransform>().localScale = new Vector3(1f, 1, 1);
+            }
+            else if (EventSystem.current.currentSelectedGameObject == quitButton)
+            {
+                quitButton.GetComponent<RectTransform>().localScale = new Vector3(1.2f, 1, 1);
+                optButton.GetComponent<RectTransform>().localScale = new Vector3(1f, 1, 1);
+                playButton.GetComponent<RectTransform>().localScale = new Vector3(1f, 1, 1);
+            }
+        }
     }
 
     public void OnClickPlay()
@@ -46,11 +88,7 @@ public class UIManager : MonoBehaviour
         {
             mainMenu.SetActive(false);
             optionsMenu.SetActive(true);
-        }
-        else
-        {
-            mainMenu.SetActive(true);
-            optionsMenu.SetActive(false);
+            EventSystem.current.SetSelectedGameObject(firstOption);
         }
     }
 
@@ -60,6 +98,7 @@ public class UIManager : MonoBehaviour
         if (!EventSystem.current.currentSelectedGameObject.GetComponent<Toggle>().isOn)
         {
             Camera.main.GetComponent<ColorBlindFilter>().mode = (ColorBlindMode) 0;
+            
         }
         else
         {
