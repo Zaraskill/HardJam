@@ -121,6 +121,18 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &46716535 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1622562965, guid: c982a0326a6c80a478acfd99cd66d633,
+    type: 3}
+  m_PrefabInstance: {fileID: 442621301}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &183129317
 GameObject:
   m_ObjectHideFlags: 0
@@ -567,6 +579,7 @@ GameObject:
   - component: {fileID: 963194226}
   - component: {fileID: 963194231}
   - component: {fileID: 963194232}
+  - component: {fileID: 963194233}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -662,6 +675,10 @@ MonoBehaviour:
   - {r: 0.36862746, g: 0.6784314, b: 0.58431375, a: 0}
   - {r: 0.015686275, g: 0.4862745, b: 0.5058824, a: 0}
   timerSwitch: 1
+  magnitude: 2
+  roughness: 2
+  fadeIn: 0.1
+  fadeOut: 1
 --- !u!114 &963194230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -758,6 +775,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mode: 0
   showDifference: 0
+--- !u!114 &963194233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ab8353b5ebd32545867da143199a814, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DefaultPosInfluence: {x: 0.15, y: 0.15, z: 0.15}
+  DefaultRotInfluence: {x: 1, y: 1, z: 1}
+  RestPositionOffset: {x: 0, y: 8.9, z: -11.5}
+  RestRotationOffset: {x: 26.832, y: 0, z: 0}
 --- !u!1 &968978854
 GameObject:
   m_ObjectHideFlags: 0
@@ -1309,6 +1342,11 @@ PrefabInstance:
       propertyPath: roundTime
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 3203806490156865734, guid: 59071b81d80c25441b4ae989e7312c80,
+        type: 3}
+      propertyPath: limitBar
+      value: 
+      objectReference: {fileID: 46716535}
     - target: {fileID: 3203806490156865735, guid: 59071b81d80c25441b4ae989e7312c80,
         type: 3}
       propertyPath: m_LocalPosition.x

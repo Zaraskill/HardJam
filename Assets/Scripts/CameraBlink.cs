@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using EZCameraShake;
 
 public class CameraBlink : MonoBehaviour
 {
@@ -10,6 +11,12 @@ public class CameraBlink : MonoBehaviour
 
     Camera cam;
     private int colorIndex;
+
+    [Header("Camera Shaker")]
+    public float magnitude;
+    public float roughness;
+    public float fadeIn;
+    public float fadeOut;
 
     // Start is called before the first frame update
     void Start()
@@ -38,6 +45,7 @@ public class CameraBlink : MonoBehaviour
         {
             cam.backgroundColor = backgroundColorList[0];
         }
+        CameraShaker.Instance.ShakeOnce(magnitude, roughness, fadeIn, fadeOut);
     }
 
     private bool UpdateBackgroundTimer()

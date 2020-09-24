@@ -59,10 +59,10 @@ MonoBehaviour:
   mainCamera: {fileID: 0}
   differentProps:
   - normalProps:
-    - {fileID: 5902761628978566939, guid: 525526e5b3fc90c49abff3b1e6522569, type: 3}
-    - {fileID: 5902761628978566939, guid: 525526e5b3fc90c49abff3b1e6522569, type: 3}
-    - {fileID: 5902761628978566939, guid: 525526e5b3fc90c49abff3b1e6522569, type: 3}
-    - {fileID: 5902761628978566939, guid: 525526e5b3fc90c49abff3b1e6522569, type: 3}
+    - {fileID: 4443195503248912068, guid: efd64ff69cba8b441bcd3d96cbc18fb0, type: 3}
+    - {fileID: 8339329539177893683, guid: 64a4eafc4d3325c4696a000ec145359f, type: 3}
+    - {fileID: 68078186675178493, guid: 3c8fe0b73afbd3c49b8ab048d948a24c, type: 3}
+    - {fileID: 172461772635031678, guid: c9057b0214f964347af09309859a4268, type: 3}
     impostorProps:
     - {fileID: 5634350695677423905, guid: ee66ce32d902067408afbd998d7f7957, type: 3}
   instanceLevels:
