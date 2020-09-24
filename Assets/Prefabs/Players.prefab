@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2901960375224379721}
+  - component: {fileID: 7778182780600431049}
   m_Layer: 0
   m_Name: Players
   m_TagString: Untagged
@@ -32,6 +33,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7778182780600431049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2983472280030821677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b8b3905a93921a4f8709a169a9dd20a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player1: {fileID: 7778182781513456968}
+  player2: {fileID: 7778182781239028570}
 --- !u!1 &7778182781239028568
 GameObject:
   m_ObjectHideFlags: 0
@@ -88,6 +103,7 @@ MonoBehaviour:
   moveSpeedValue: 10
   cooldownFailHitMax: 3
   score: 0
+  players: {fileID: 7778182780600431049}
   hitText: {fileID: 0}
   crosshairUI: {fileID: 0}
   hitParticleNormal: {fileID: 1005815332700790, guid: 0af96e15318cda2419fb095df72adbde,
@@ -150,6 +166,7 @@ MonoBehaviour:
   moveSpeedValue: 10
   cooldownFailHitMax: 3
   score: 0
+  players: {fileID: 7778182780600431049}
   hitText: {fileID: 0}
   crosshairUI: {fileID: 0}
   hitParticleNormal: {fileID: 1005815332700790, guid: 0af96e15318cda2419fb095df72adbde,

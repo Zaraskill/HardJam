@@ -27,6 +27,7 @@ public class PlayerController : MonoBehaviour
     public float cooldownFailHitMax;
     [HideInInspector] public int score;
     private bool canHit;
+    public PlayersVar players;
 
     [Header("Player UI")]
     public Text hitText;
@@ -113,18 +114,30 @@ public class PlayerController : MonoBehaviour
             if (hit.transform.gameObject.layer == 9)
             {
                 score++;
-
-                ScoreUpdateText();
-                GameManager.instance.NextRound();
                 OnHitSomeonePlayThis(true);
             }
             else
             {
-                canHit = false;
-                crosshairUI.fillAmount = 0;
+                if(score > 0)
+                {
+                    score--;
+                }
+                if (_PlayerId == 0)
+                {
+                    players.player2.score++;
+                    players.player2.ScoreUpdateText();
+                }
+                else
+                {
+                    players.player1.score++;
+                    players.player1.ScoreUpdateText();
+                }
+                //canHit = false;
+                //crosshairUI.fillAmount = 0;
                 OnHitSomeonePlayThis(false);
             }
-
+            ScoreUpdateText();
+            GameManager.instance.NextRound();
         }
 //#if UNITY_EDITOR
 //        Debug.DrawRay(mainCam.transform.localPosition, (cursor.transform.position - mainCam.transform.position).normalized * 100000f, Color.yellow, 0.5f);
