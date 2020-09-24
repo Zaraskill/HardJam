@@ -1,8 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class UIManager : MonoBehaviour
 {
@@ -12,6 +14,9 @@ public class UIManager : MonoBehaviour
     public GameObject optionsMenu;
     public Slider sliderVolume;
     public Slider sliderSfx;
+    public GameObject eventSystem;
+    public GameObject firstMenu;
+    public GameObject firstOption;
     [SerializeField] private Toggle[] toggleList;
 
     void Awake()
@@ -72,5 +77,16 @@ public class UIManager : MonoBehaviour
     public void SlideSfx()
     {
         float valueSfx = sliderSfx.value;
+    }
+
+    public void OnCancel()
+    {
+        if (optionsMenu.activeInHierarchy)
+        {
+            mainMenu.SetActive(true);
+            optionsMenu.SetActive(false);
+            FindObjectOfType<EventSystem>().firstSelectedGameObject = firstOption;
+        }
+        
     }
 }
