@@ -33,6 +33,7 @@ public class GameManager : MonoBehaviour
     public float gameTime = 90f;
     private float _gameTimeLeft;
     public Image timerBar;
+    public Image limitBar;
 
     //Test
     [Header("Score")]
@@ -114,6 +115,9 @@ public class GameManager : MonoBehaviour
         _roundTimeLeft -= Time.deltaTime;
         timerBar.fillAmount = _roundTimeLeft / roundTime;
         timerBar.color = Color.Lerp(Color.red, Color.green, timerBar.fillAmount);
+        limitBar.rectTransform.anchorMin = new Vector2(timerBar.fillAmount, limitBar.rectTransform.anchorMin.y);
+        limitBar.rectTransform.anchorMax = new Vector2(timerBar.fillAmount, limitBar.rectTransform.anchorMax.y);
+        limitBar.rectTransform.anchoredPosition = Vector2.zero;
         if (_roundTimeLeft <= 0)
         {
             _roundTimeLeft = roundTime;

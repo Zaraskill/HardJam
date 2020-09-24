@@ -59,15 +59,12 @@ MonoBehaviour:
   mainCamera: {fileID: 0}
   differentProps:
   - normalProps:
-    - {fileID: 4443195503248912068, guid: efd64ff69cba8b441bcd3d96cbc18fb0, type: 3}
-    - {fileID: 8339329539177893683, guid: 64a4eafc4d3325c4696a000ec145359f, type: 3}
-    - {fileID: 68078186675178493, guid: 3c8fe0b73afbd3c49b8ab048d948a24c, type: 3}
-    - {fileID: 172461772635031678, guid: c9057b0214f964347af09309859a4268, type: 3}
+    - {fileID: 5902761628978566939, guid: 525526e5b3fc90c49abff3b1e6522569, type: 3}
+    - {fileID: 5902761628978566939, guid: 525526e5b3fc90c49abff3b1e6522569, type: 3}
+    - {fileID: 5902761628978566939, guid: 525526e5b3fc90c49abff3b1e6522569, type: 3}
+    - {fileID: 5902761628978566939, guid: 525526e5b3fc90c49abff3b1e6522569, type: 3}
     impostorProps:
-    - {fileID: 4443195503248912068, guid: 80a939fa7edfbb54c9f486720b49805a, type: 3}
-    - {fileID: 8339329539177893683, guid: a23a85d17ddb9544dadf5b34c8169216, type: 3}
-    - {fileID: 68078186675178493, guid: 68620825e96e7c746be94f329a9e96bc, type: 3}
-    - {fileID: 172461772635031678, guid: 8015cdf078e4c444bbf35061268513ed, type: 3}
+    - {fileID: 5634350695677423905, guid: ee66ce32d902067408afbd998d7f7957, type: 3}
   instanceLevels:
   - {fileID: 2101059140170399035, guid: d8e59be8652c7bc458bbf81105e26e91, type: 3}
   - {fileID: 2431286033738115938, guid: 3223dd230925b7441b2163cd6f5d33e5, type: 3}
@@ -85,6 +82,7 @@ MonoBehaviour:
   roundTime: 15
   gameTime: 90
   timerBar: {fileID: 0}
+  limitBar: {fileID: 0}
   score1: 0
   score2: 0
   scoreTextJ1: {fileID: 0}
