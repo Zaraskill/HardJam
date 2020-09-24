@@ -105,6 +105,7 @@ public class GameManager : MonoBehaviour
                 occupiedSpawnPoints.Add(randomIndex);
                 instance = Instantiate(differentProps[family].normalProps[Random.Range(0, differentProps[family].normalProps.Capacity)] , propsSpawnPointsArray[randomIndex].transform.position, Quaternion.identity);
                 instance.transform.SetParent(plateauTournant.transform);
+                instance.transform.Rotate(new Vector3(instance.transform.rotation.x, Random.Range(0f,361f), instance.transform.rotation.z));
                 i++;
             }
         }
