@@ -814,8 +814,8 @@ MonoBehaviour:
   backgroundColorList:
   - {r: 0.36862746, g: 0.6784314, b: 0.58431375, a: 0}
   - {r: 0.015686275, g: 0.4862745, b: 0.5058824, a: 0}
-  timerSwitch: 1
-  magnitude: 2
+  timerSwitch: 0.5
+  magnitude: 1
   roughness: 2
   fadeIn: 0.1
   fadeOut: 1
@@ -1013,6 +1013,75 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &1261806559
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3525188409381133800, guid: ba99626da9fb74e40bec958308ddfc5c,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3525188409381133800, guid: ba99626da9fb74e40bec958308ddfc5c,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.36
+      objectReference: {fileID: 0}
+    - target: {fileID: 3525188409381133800, guid: ba99626da9fb74e40bec958308ddfc5c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3525188409381133800, guid: ba99626da9fb74e40bec958308ddfc5c,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3525188409381133800, guid: ba99626da9fb74e40bec958308ddfc5c,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3525188409381133800, guid: ba99626da9fb74e40bec958308ddfc5c,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3525188409381133800, guid: ba99626da9fb74e40bec958308ddfc5c,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3525188409381133800, guid: ba99626da9fb74e40bec958308ddfc5c,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3525188409381133800, guid: ba99626da9fb74e40bec958308ddfc5c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3525188409381133800, guid: ba99626da9fb74e40bec958308ddfc5c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3525188409381133800, guid: ba99626da9fb74e40bec958308ddfc5c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3525188409381133804, guid: ba99626da9fb74e40bec958308ddfc5c,
+        type: 3}
+      propertyPath: m_Name
+      value: SoundManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ba99626da9fb74e40bec958308ddfc5c, type: 3}
 --- !u!1 &1311921051
 GameObject:
   m_ObjectHideFlags: 0

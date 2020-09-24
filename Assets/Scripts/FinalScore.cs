@@ -65,19 +65,19 @@ public class FinalScore : MonoBehaviour
         {
             player1Win.gameObject.SetActive(true);
             player2Win.gameObject.SetActive(false);
-            //egalWin.gameObject.SetActive(false);
+            egalWin.gameObject.SetActive(false);
         }
         else if (players.player1.score < players.player2.score)
         {
             player1Win.gameObject.SetActive(false);
             player2Win.gameObject.SetActive(true);
-            //egalWin.gameObject.SetActive(false);
+            egalWin.gameObject.SetActive(false);
         }
         else
         {
             player1Win.gameObject.SetActive(false);
             player2Win.gameObject.SetActive(false);
-            //egalWin.gameObject.SetActive(true);
+            egalWin.gameObject.SetActive(true);
         }
     }
 }

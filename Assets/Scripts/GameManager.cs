@@ -49,6 +49,7 @@ public class GameManager : MonoBehaviour
     public List<BackgroundColors> bgColorsList;
     private int colorIndex = 0;
 
+    private bool is30SecDone = false;
     void Awake()
     {
         if (instance == null)
@@ -138,9 +139,10 @@ public class GameManager : MonoBehaviour
     private void GameTimer()
     {
         _gameTimeLeft -= Time.deltaTime;
-        if(_gameTimeLeft <= 30)
+        if(Mathf.FloorToInt(_gameTimeLeft) == 30 && !is30SecDone)
         {
-
+            SoundManager.instance.Play30sec();
+            is30SecDone = true;
         }
         if(_gameTimeLeft <= 0)
         {

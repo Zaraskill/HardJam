@@ -125,6 +125,7 @@ public class PlayerController : MonoBehaviour
             {
                 score++;
                 OnHitSomeonePlayThis(true);
+                SoundManager.instance.PlayYes();
             }
             else
             {
@@ -140,6 +141,7 @@ public class PlayerController : MonoBehaviour
                 }
                 //canHit = false;
                 //crosshairUI.fillAmount = 0;
+                SoundManager.instance.PlayNo();
                 CameraShaker.Instance.ShakeOnce(magnitude, roughness, fadeIn, fadeOut);
                 OnHitSomeonePlayThis(false);
             }
