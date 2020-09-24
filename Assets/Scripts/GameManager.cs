@@ -13,6 +13,9 @@ public class GameManager : MonoBehaviour
     public List<int> occupiedSpawnPoints;
     public int maxPropsInLevel = 5;
 
+    [Header("Enum State")]
+    [HideInInspector] public EnumStateScene state;
+
     [Header("Camera")]
     public Camera mainCamera;
 
@@ -36,11 +39,11 @@ public class GameManager : MonoBehaviour
     public Image limitBar;
 
     //Test
-    [Header("Score")]
-    public int score1 = 0;
-    public int score2 = 0;
-    public Text scoreTextJ1;
-    public Text scoreTextJ2;
+    //[Header("Score")]
+    //public int score1 = 0;
+    //public int score2 = 0;
+    //public Text scoreTextJ1;
+    //public Text scoreTextJ2;
 
     [Header("Background Color")]
     public List<BackgroundColors> bgColorsList;
@@ -68,6 +71,7 @@ public class GameManager : MonoBehaviour
 
     void Init()
     {
+        state = EnumStateScene.Level;
         _roundTimeLeft = roundTime;
         _gameTimeLeft = gameTime;
         instanceLevel = Instantiate(instanceLevels[Random.Range(0, instanceLevels.Capacity)], plateauTournant.transform);
@@ -78,10 +82,14 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //SpawnProps();
-        if (RoundTimer())
+        if (state == EnumStateScene.Level)
         {
-            NextRound();
+            //SpawnProps();
+            if (RoundTimer())
+            {
+                NextRound();
+            }
+            GameTimer();
         }
         
         //scoreTextJ1.text = score1.ToString();
@@ -130,20 +138,13 @@ public class GameManager : MonoBehaviour
     private void GameTimer()
     {
         _gameTimeLeft -= Time.deltaTime;
+        if(_gameTimeLeft <= 30)
+        {
+
+        }
         if(_gameTimeLeft <= 0)
         {
-            if (score1 > score2)
-            {
-
-            }
-            else if (score1 < score2)
-            {
-
-            }
-            else
-            {
-
-            }
+            FinalScore.instance.StopGameplayAndShowFinalScore();
         }
     }
 

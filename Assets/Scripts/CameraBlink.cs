@@ -29,9 +29,12 @@ public class CameraBlink : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(UpdateBackgroundTimer())
+        if (GameManager.instance.state == EnumStateScene.Level)
         {
-            SwitchBackgroundColor();
+            if (UpdateBackgroundTimer())
+            {
+                SwitchBackgroundColor();
+            }
         }
     }
 

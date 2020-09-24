@@ -43,9 +43,12 @@ public class ColorChange : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (UpdateTimer())
+        if (GameManager.instance.state == EnumStateScene.Level)
         {
-            SwitchColor();
+            if (UpdateTimer())
+            {
+                SwitchColor();
+            }
         }
     }
 

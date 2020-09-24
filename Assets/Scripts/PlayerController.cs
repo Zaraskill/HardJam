@@ -57,26 +57,29 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!canHit)
+        if (GameManager.instance.state == EnumStateScene.Level)
         {
-            cooldownFailHit += Time.deltaTime;
-            
-            crosshairUI.fillAmount += (cooldownFailHit / cooldownFailHitMax) / 100;
-            if (cooldownFailHit >= cooldownFailHitMax)
+            if (!canHit)
             {
-                cooldownFailHit = 0;
-                canHit = true;
-            }
-        }
-        else
-        {
-            if (inputPlayer.GetButtonDown("Select"))
-            {
-                CursorRaycast();
-            }
-        }
+                cooldownFailHit += Time.deltaTime;
 
-        CursorMovement();
+                crosshairUI.fillAmount += (cooldownFailHit / cooldownFailHitMax) / 100;
+                if (cooldownFailHit >= cooldownFailHitMax)
+                {
+                    cooldownFailHit = 0;
+                    canHit = true;
+                }
+            }
+            else
+            {
+                if (inputPlayer.GetButtonDown("Select"))
+                {
+                    CursorRaycast();
+                }
+            }
+
+            CursorMovement();
+        }
     }
 
     private void CursorMovement()
