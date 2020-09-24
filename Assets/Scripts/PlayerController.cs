@@ -52,9 +52,8 @@ public class PlayerController : MonoBehaviour
         if (!canHit)
         {
             cooldownFailHit += Time.deltaTime;
-
-            float a = crosshairUI.color.a;
-            //crosshairUI.fillAmount += (cooldownFailHit / cooldownFailHitMax) / 100;
+            
+            crosshairUI.fillAmount += (cooldownFailHit / cooldownFailHitMax) / 100;
             if (cooldownFailHit >= cooldownFailHitMax)
             {
                 cooldownFailHit = 0;

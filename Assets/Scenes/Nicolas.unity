@@ -791,6 +791,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 352573762, guid: c982a0326a6c80a478acfd99cd66d633, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 352573762, guid: c982a0326a6c80a478acfd99cd66d633, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 352573762, guid: c982a0326a6c80a478acfd99cd66d633, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 352573763, guid: c982a0326a6c80a478acfd99cd66d633, type: 3}
+      propertyPath: m_FillAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1529040024, guid: c982a0326a6c80a478acfd99cd66d633, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1529040024, guid: c982a0326a6c80a478acfd99cd66d633, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1529040024, guid: c982a0326a6c80a478acfd99cd66d633, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 551815370205291617, guid: c982a0326a6c80a478acfd99cd66d633,
         type: 3}
       propertyPath: m_Camera
@@ -2360,7 +2388,7 @@ PrefabInstance:
         type: 3}
       propertyPath: crosshairUI
       value: 
-      objectReference: {fileID: 352573763}
+      objectReference: {fileID: 1529040025}
     - target: {fileID: 7778182781513456968, guid: 7e4faed6462c6e94a8138885cac5e140,
         type: 3}
       propertyPath: cursor
@@ -2375,6 +2403,6 @@ PrefabInstance:
         type: 3}
       propertyPath: crosshairUI
       value: 
-      objectReference: {fileID: 1529040025}
+      objectReference: {fileID: 352573763}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e4faed6462c6e94a8138885cac5e140, type: 3}
