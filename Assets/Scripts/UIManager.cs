@@ -21,6 +21,11 @@ public class UIManager : MonoBehaviour
     public GameObject playButton;
     public GameObject optButton;
     public GameObject quitButton;
+    public GameObject tutorial;
+    public GameObject tutoTwo;
+    public GameObject button;
+    public float timerWait;
+    private float timer;
 
 
     void Awake()
@@ -38,23 +43,24 @@ public class UIManager : MonoBehaviour
     private void Start()
     {
         listPlayers = ReInput.players.AllPlayers;
+        timer = timerWait;
     }
 
     private void Update()
     {
-        foreach(Player player in listPlayers)
+        if (optionsMenu.activeInHierarchy)
         {
-            if (player.GetButtonDown("UICancel"))
+            foreach (Player player in listPlayers)
             {
-                if (optionsMenu.activeInHierarchy)
+                if (player.GetButtonDown("UICancel"))
                 {
                     mainMenu.SetActive(true);
                     optionsMenu.SetActive(false);
                     EventSystem.current.SetSelectedGameObject(firstMenu);
-                }                
+                }
             }
-        }
-        if (mainMenu.activeInHierarchy)
+        }        
+        else if (mainMenu.activeInHierarchy)
         {
             if(EventSystem.current.currentSelectedGameObject == playButton)
             {
@@ -75,11 +81,36 @@ public class UIManager : MonoBehaviour
                 playButton.GetComponent<RectTransform>().localScale = new Vector3(1f, 1, 1);
             }
         }
+        else if (tutorial.activeInHierarchy)
+        {
+            timer -= Time.deltaTime;
+            if (timer <= 0)
+            {
+                button.SetActive(true);
+                foreach (Player player in listPlayers)
+                {
+                    if (player.GetButtonDown("UISubmit"))
+                    {
+                        if (tutoTwo.activeInHierarchy)
+                        {
+                            SceneManager.LoadScene(1);
+                        }
+                        else
+                        {
+                            tutoTwo.SetActive(true);
+                            button.SetActive(false);
+                            timer = timerWait;
+                        }
+                    }
+                }
+            }
+        }
     }
 
     public void OnClickPlay()
     {
-        SceneManager.LoadScene(1);
+        mainMenu.SetActive(false);
+        tutorial.SetActive(true);
     }
 
     public void OnClickOptions(bool sideChange)
