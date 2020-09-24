@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd5025615170ed4885b36cc6b88b7ce, type: 3}
+  m_Name: 4EC793F6-8225-4317-997A-C6EC34E73BCC
+  m_EditorClassIdentifier: 
+  objectName: GameSoundBank
+  id: 460270446
+  guid: 4EC793F6-8225-4317-997A-C6EC34E73BCC

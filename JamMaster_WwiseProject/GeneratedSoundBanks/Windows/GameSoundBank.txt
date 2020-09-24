@@ -1,0 +1,20 @@
+Event	ID	Name			Wwise Object Path	Notes
+	206418435	Play_Musique			\Default Work Unit\Play_Musique	
+	704058254	Play_AllNo			\Default Work Unit\Play_AllNo	
+	1683763229	Play_All30sec			\Default Work Unit\Play_All30sec	
+	2479810432	Play_AllYes			\Default Work Unit\Play_AllYes	
+	2628502312	Play_AllNext			\Default Work Unit\Play_AllNext	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	33366193	Next1	D:\IIM\Unity\HardJam\JamMaster_WwiseProject\.cache\Windows\SFX\Next1_10C4C929.wem		\Actor-Mixer Hierarchy\Scene\AllNext\Next1		113772
+	508258711	30sec2	D:\IIM\Unity\HardJam\JamMaster_WwiseProject\.cache\Windows\SFX\30sec2_10C4C929.wem		\Actor-Mixer Hierarchy\Scene\All30sec\30sec2		263880
+	521256757	Yess	D:\IIM\Unity\HardJam\JamMaster_WwiseProject\.cache\Windows\SFX\Yess_10C4C929.wem		\Actor-Mixer Hierarchy\Scene\AllYes\Yess		168896
+	591835873	Musique	D:\IIM\Unity\HardJam\JamMaster_WwiseProject\.cache\Windows\SFX\Musique_10C4C929.wem		\Actor-Mixer Hierarchy\Scene\Musique		45749636
+	625101014	Next2	D:\IIM\Unity\HardJam\JamMaster_WwiseProject\.cache\Windows\SFX\Next2_10C4C929.wem		\Actor-Mixer Hierarchy\Scene\AllNext\Next2		135820
+	768601021	30sec1	D:\IIM\Unity\HardJam\JamMaster_WwiseProject\.cache\Windows\SFX\30sec1_10C4C929.wem		\Actor-Mixer Hierarchy\Scene\All30sec\30sec1		220628
+	769798839	No no no	D:\IIM\Unity\HardJam\JamMaster_WwiseProject\.cache\Windows\SFX\No no no_10C4C929.wem		\Actor-Mixer Hierarchy\Scene\AllNo\No no no		258792
+	880321137	30sec3	D:\IIM\Unity\HardJam\JamMaster_WwiseProject\.cache\Windows\SFX\30sec3_10C4C929.wem		\Actor-Mixer Hierarchy\Scene\All30sec\30sec3		272360
+	976783787	Yeah	D:\IIM\Unity\HardJam\JamMaster_WwiseProject\.cache\Windows\SFX\Yeah_10C4C929.wem		\Actor-Mixer Hierarchy\Scene\AllYes\Yeah		155328
+	1007290076	Next3	D:\IIM\Unity\HardJam\JamMaster_WwiseProject\.cache\Windows\SFX\Next3_10C4C929.wem		\Actor-Mixer Hierarchy\Scene\AllNext\Next3		134972
+	1060069363	NO	D:\IIM\Unity\HardJam\JamMaster_WwiseProject\.cache\Windows\SFX\NO_10C4C929.wem		\Actor-Mixer Hierarchy\Scene\AllNo\NO		174832
+

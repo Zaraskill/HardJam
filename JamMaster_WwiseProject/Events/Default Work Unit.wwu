@@ -1,6 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{307A8B5A-CF70-41FC-AEE3-79D58C5A6EC1}" SchemaVersion="97">
 	<Events>
-		<WorkUnit Name="Default Work Unit" ID="{307A8B5A-CF70-41FC-AEE3-79D58C5A6EC1}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{307A8B5A-CF70-41FC-AEE3-79D58C5A6EC1}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Play_AllNo" ID="{B7F26A1D-A262-4180-B0B6-C299E0B7F49C}">
+					<ChildrenList>
+						<Action Name="" ID="{8CF12447-51A1-48B0-90D8-72D3F0516C09}" ShortID="1069287663">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="AllNo" ID="{5B538B1A-B833-472B-AC8F-FCEBEC7BB0EE}" WorkUnitID="{5F173690-CBE3-4094-A08D-6659742329A7}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Musique" ID="{1F4E050C-F340-4D24-B012-DA977E0BCAE8}">
+					<ChildrenList>
+						<Action Name="" ID="{56DD83BE-91D4-4848-976E-97641B581CBB}" ShortID="64262114">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Musique" ID="{EA5AE458-4388-4820-960A-8C36D0E9779A}" WorkUnitID="{5F173690-CBE3-4094-A08D-6659742329A7}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_AllNext" ID="{7B54D1AD-9165-4614-B451-E62F4A2297C3}">
+					<ChildrenList>
+						<Action Name="" ID="{23D27D9E-F004-4BD3-95BB-87105164025B}" ShortID="627755835">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="AllNext" ID="{61E10397-FABC-49B7-A30E-95FFD0C460CE}" WorkUnitID="{5F173690-CBE3-4094-A08D-6659742329A7}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_AllYes" ID="{F0F8B66F-2FA8-41CB-AA4F-DD6871A31ACE}">
+					<ChildrenList>
+						<Action Name="" ID="{14161A2B-3929-4548-A0BA-629669258ADB}" ShortID="640017673">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="AllYes" ID="{E02D6F52-F691-4062-86DC-C68F2A334BAF}" WorkUnitID="{5F173690-CBE3-4094-A08D-6659742329A7}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_All30sec" ID="{99895C53-3A3B-413D-8577-A5B62F1EC57D}">
+					<ChildrenList>
+						<Action Name="" ID="{B5841F2B-F70B-424D-9A54-F548940AE646}" ShortID="113544325">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="All30sec" ID="{B46E96C3-4CB9-442C-A51B-5188C335993F}" WorkUnitID="{5F173690-CBE3-4094-A08D-6659742329A7}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
 	</Events>
 </WwiseDocument>

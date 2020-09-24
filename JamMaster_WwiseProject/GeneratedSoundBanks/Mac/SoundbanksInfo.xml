@@ -1,35 +1,113 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="12" SoundbankVersion="135">
 	<RootPaths>
-		<ProjectRoot>A:\IIM\JamMaster\JamMaster_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>A:\IIM\JamMaster\JamMaster_WwiseProject\.cache\Mac\</SourceFilesRoot>
-		<SoundBanksRoot>A:\IIM\JamMaster\JamMaster_WwiseProject\GeneratedSoundBanks\Mac\</SoundBanksRoot>
+		<ProjectRoot>D:\IIM\Unity\HardJam\JamMaster_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>D:\IIM\Unity\HardJam\JamMaster_WwiseProject\.cache\Mac\</SourceFilesRoot>
+		<SoundBanksRoot>D:\IIM\Unity\HardJam\JamMaster_WwiseProject\GeneratedSoundBanks\Mac\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>A:\IIM\JamMaster\JamMaster_WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>D:\IIM\Unity\HardJam\JamMaster_WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX">
-			<ObjectPath>Init</ObjectPath>
-			<ShortName>Init</ShortName>
-			<Path>Init.bnk</Path>
-		</SoundBank>
-		<SoundBank Id="1661994096" Language="SFX">
-			<ObjectPath>\SoundBanks\Default Work Unit\SoundBank</ObjectPath>
-			<ShortName>SoundBank</ShortName>
-			<Path>SoundBank.bnk</Path>
+		<SoundBank Id="460270446" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\GameSoundBank</ObjectPath>
+			<ShortName>GameSoundBank</ShortName>
+			<Path>GameSoundBank.bnk</Path>
 			<IncludedEvents>
-				<Event Id="1256202815" Name="Play" ObjectPath="\Events\Default Work Unit\Play" DurationType="OneShot" DurationMin="0.903333" DurationMax="0.903333">
+				<Event Id="1683763229" Name="Play_All30sec" ObjectPath="\Events\Default Work Unit\Play_All30sec" DurationType="OneShot" DurationMin="1.486509" DurationMax="1.835262">
 					<IncludedMemoryFiles>
-						<File Id="274829388" Language="SFX">
-							<ShortName>SFX_Ennemi_Die_1.wav</ShortName>
-							<Path>SFX\SFX_Ennemi_Die_1_10C4C929.wem</Path>
+						<File Id="508258711" Language="SFX">
+							<ShortName>30sec2.wav</ShortName>
+							<Path>SFX\30sec2_10C4C929.wem</Path>
+						</File>
+						<File Id="768601021" Language="SFX">
+							<ShortName>30sec1.wav</ShortName>
+							<Path>SFX\30sec1_10C4C929.wem</Path>
+						</File>
+						<File Id="880321137" Language="SFX">
+							<ShortName>30sec3.wav</ShortName>
+							<Path>SFX\30sec3_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2628502312" Name="Play_AllNext" ObjectPath="\Events\Default Work Unit\Play_AllNext" DurationType="OneShot" DurationMin="0.766135" DurationMax="0.914773">
+					<IncludedMemoryFiles>
+						<File Id="33366193" Language="SFX">
+							<ShortName>Next1.wav</ShortName>
+							<Path>SFX\Next1_10C4C929.wem</Path>
+						</File>
+						<File Id="625101014" Language="SFX">
+							<ShortName>Next2.wav</ShortName>
+							<Path>SFX\Next2_10C4C929.wem</Path>
+						</File>
+						<File Id="1007290076" Language="SFX">
+							<ShortName>Next3.wav</ShortName>
+							<Path>SFX\Next3_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="704058254" Name="Play_AllNo" ObjectPath="\Events\Default Work Unit\Play_AllNo" DurationType="OneShot" DurationMin="1.177773" DurationMax="1.743793">
+					<IncludedMemoryFiles>
+						<File Id="769798839" Language="SFX">
+							<ShortName>No no no.wav</ShortName>
+							<Path>SFX\No no no_10C4C929.wem</Path>
+						</File>
+						<File Id="1060069363" Language="SFX">
+							<ShortName>NO.wav</ShortName>
+							<Path>SFX\NO_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2479810432" Name="Play_AllYes" ObjectPath="\Events\Default Work Unit\Play_AllYes" DurationType="OneShot" DurationMin="1.046287" DurationMax="1.137756">
+					<IncludedMemoryFiles>
+						<File Id="521256757" Language="SFX">
+							<ShortName>Yess.wav</ShortName>
+							<Path>SFX\Yess_10C4C929.wem</Path>
+						</File>
+						<File Id="976783787" Language="SFX">
+							<ShortName>Yeah.wav</ShortName>
+							<Path>SFX\Yeah_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="206418435" Name="Play_Musique" ObjectPath="\Events\Default Work Unit\Play_Musique" DurationType="OneShot" DurationMin="259.350952" DurationMax="259.350952">
+					<IncludedMemoryFiles>
+						<File Id="591835873" Language="SFX">
+							<ShortName>Musique.wav</ShortName>
+							<Path>SFX\Musique_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
 			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="33366193" Language="SFX">
+					<ShortName>Next1.wav</ShortName>
+					<Path>SFX\Next1_10C4C929.wem</Path>
+				</File>
+				<File Id="521256757" Language="SFX">
+					<ShortName>Yess.wav</ShortName>
+					<Path>SFX\Yess_10C4C929.wem</Path>
+				</File>
+				<File Id="625101014" Language="SFX">
+					<ShortName>Next2.wav</ShortName>
+					<Path>SFX\Next2_10C4C929.wem</Path>
+				</File>
+				<File Id="976783787" Language="SFX">
+					<ShortName>Yeah.wav</ShortName>
+					<Path>SFX\Yeah_10C4C929.wem</Path>
+				</File>
+				<File Id="1007290076" Language="SFX">
+					<ShortName>Next3.wav</ShortName>
+					<Path>SFX\Next3_10C4C929.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+		<SoundBank Id="1355168291" Language="SFX">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
 		</SoundBank>
 	</SoundBanks>
 </SoundBanksInfo>
