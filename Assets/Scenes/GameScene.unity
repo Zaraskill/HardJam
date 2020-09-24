@@ -232,16 +232,6 @@ PrefabInstance:
       propertyPath: players
       value: 
       objectReference: {fileID: 934334787}
-    - target: {fileID: 6177171933271553692, guid: affe2e8112229d04589cac85e4c8af1c,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6177171933271553692, guid: affe2e8112229d04589cac85e4c8af1c,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 254.32025
-      objectReference: {fileID: 0}
     - target: {fileID: 8422635306841657608, guid: affe2e8112229d04589cac85e4c8af1c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1500,7 +1490,7 @@ PrefabInstance:
     - target: {fileID: 3203806490156865734, guid: 59071b81d80c25441b4ae989e7312c80,
         type: 3}
       propertyPath: gameTime
-      value: 10
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 3203806490156865735, guid: 59071b81d80c25441b4ae989e7312c80,
         type: 3}
