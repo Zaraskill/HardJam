@@ -221,6 +221,11 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 963194227}
+    - target: {fileID: 1180008403187250355, guid: c982a0326a6c80a478acfd99cd66d633,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1577082526709079130, guid: c982a0326a6c80a478acfd99cd66d633,
         type: 3}
       propertyPath: m_Name
@@ -515,6 +520,7 @@ GameObject:
   - component: {fileID: 963194230}
   - component: {fileID: 963194226}
   - component: {fileID: 963194231}
+  - component: {fileID: 963194232}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -692,6 +698,20 @@ MonoBehaviour:
   m_BeforeTransparentBundles: []
   m_BeforeStackBundles: []
   m_AfterStackBundles: []
+--- !u!114 &963194232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75ef3d3a90250f940860f4733f93ce6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mode: 0
+  showDifference: 0
 --- !u!1 &968978854
 GameObject:
   m_ObjectHideFlags: 0
@@ -836,7 +856,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 612ebb492ccc9f94bb99fb1161500043, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 0.25
+  rotationSpeed: 0.2
 --- !u!65 &1431882624
 BoxCollider:
   m_ObjectHideFlags: 0

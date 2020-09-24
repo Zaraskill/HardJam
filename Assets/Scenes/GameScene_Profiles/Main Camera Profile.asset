@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40b924e2dad56384a8df2a1e111bb675, type: 3}
   m_Name: Vignette
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   enabled:
     overrideState: 1
     value: 1
@@ -44,34 +44,6 @@ MonoBehaviour:
   opacity:
     overrideState: 0
     value: 1
---- !u!114 &-5579939609956728733
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d65e486e4de6e5448a8fbb43dc8756a0, type: 3}
-  m_Name: Grain
-  m_EditorClassIdentifier: 
-  active: 1
-  enabled:
-    overrideState: 1
-    value: 1
-  colored:
-    overrideState: 0
-    value: 1
-  intensity:
-    overrideState: 1
-    value: 0.22
-  size:
-    overrideState: 0
-    value: 0.89
-  lumContrib:
-    overrideState: 0
-    value: 0.97
 --- !u!114 &-2756963656060059245
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -1447,7 +1419,6 @@ MonoBehaviour:
   settings:
   - {fileID: -8212154130214481028}
   - {fileID: -2756963656060059245}
-  - {fileID: -5579939609956728733}
   - {fileID: -2235302980957002601}
   - {fileID: 6302131565614706924}
   - {fileID: 5973729448988630262}
