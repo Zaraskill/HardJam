@@ -1255,6 +1255,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SoundManager
       objectReference: {fileID: 0}
+    - target: {fileID: 3525188409381133806, guid: ba99626da9fb74e40bec958308ddfc5c,
+        type: 3}
+      propertyPath: triggerList.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba99626da9fb74e40bec958308ddfc5c, type: 3}
 --- !u!1 &1311921051
@@ -1812,6 +1817,11 @@ PrefabInstance:
       propertyPath: gameTime
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 3203806490156865734, guid: 59071b81d80c25441b4ae989e7312c80,
+        type: 3}
+      propertyPath: postProcess
+      value: 
+      objectReference: {fileID: 1484058762}
     - target: {fileID: 3203806490156865735, guid: 59071b81d80c25441b4ae989e7312c80,
         type: 3}
       propertyPath: m_LocalPosition.x

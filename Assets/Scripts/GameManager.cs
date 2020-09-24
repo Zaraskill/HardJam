@@ -4,6 +4,7 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
+using UnityEngine.Rendering.PostProcessing;
 
 public class GameManager : MonoBehaviour
 {
@@ -35,6 +36,9 @@ public class GameManager : MonoBehaviour
 
     private bool pause;
 
+    [SerializeField] private PostProcessVolume postProcess;
+    [SerializeField] DepthOfField depthOfField;
+
     //Test
     //[Header("Score")]
     //public int score1 = 0;
@@ -64,6 +68,8 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        postProcess.profile.TryGetSettings(out depthOfField);
+        depthOfField.active = false;
         Init();
     }
 
@@ -160,17 +166,20 @@ public class GameManager : MonoBehaviour
         _roundTimeLeft = roundTime;
         randomPattern = Random.Range(0, patterns.Capacity);
         propsSpawnPointsArray = Array.Empty<GameObject>();
-        Destroy(instanceLevel.gameObject);        
-        yield return new WaitForEndOfFrame();
+        Destroy(instanceLevel.gameObject);
 
+        depthOfField.active = true;
+        yield return new WaitForEndOfFrame();
+       
+   
         instanceLevel = Instantiate(objToInstantiate, plateauTournant.transform);
 
         DestroyProps();
         propsSpawnPointsArray = GameObject.FindGameObjectsWithTag("Spawnpoint");
-
-
         SpawnProps();
 
+        yield return new WaitForSeconds(0.2f);
+        depthOfField.active = false;
 
 
 
