@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class UIManager : MonoBehaviour
 
     public GameObject mainMenu;
     public GameObject optionsMenu;
+    [SerializeField] private Toggle[] toggleList;
 
     void Awake()
     {
@@ -19,6 +21,15 @@ public class UIManager : MonoBehaviour
         else
         {
             Destroy(gameObject);
+        }
+    }
+
+    private void Start()
+    {
+        toggleList = FindObjectsOfType<Toggle>();
+        foreach (Toggle toggle in toggleList)
+        {
+            toggle.isOn = false;
         }
     }
 
@@ -41,9 +52,9 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    public void ToggleScript()
+    public void ToggleScript(int numberToggle)
     {
-
+        Camera.main.GetComponent<ColorBlindFilter>().mode = (ColorBlindMode) numberToggle;
     }
 
     public void OnClickQuit()
