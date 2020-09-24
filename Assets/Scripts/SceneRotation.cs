@@ -5,7 +5,12 @@ using UnityEngine;
 public class SceneRotation : MonoBehaviour
 {
     public float rotationSpeed;
-    
+
+    private void Awake()
+    {
+        GameManager.instance.plateauTournant = this.gameObject;
+    }
+
     // Update is called once per frame
     void Update()
     {

@@ -5,6 +5,7 @@ using UnityEngine;
 public enum EnumStateScene{
     Menu,
     Tutorial,
+    Pause,
     Level,
     FinalScore,
 }

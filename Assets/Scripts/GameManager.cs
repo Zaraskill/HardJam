@@ -16,9 +16,6 @@ public class GameManager : MonoBehaviour
     [Header("Enum State")]
     [HideInInspector] public EnumStateScene state;
 
-    [Header("Camera")]
-    public Camera mainCamera;
-
     [Header("Different Props")]
     public List<Props> differentProps;
     public List<GameObject> instanceLevels;
@@ -27,7 +24,7 @@ public class GameManager : MonoBehaviour
     public List<Colors> patterns;
     private int randomPattern;
 
-    public GameObject plateauTournant;
+    [HideInInspector] public GameObject plateauTournant;
     private GameObject instanceLevel;
 
     [Header("Timer")]
@@ -35,8 +32,8 @@ public class GameManager : MonoBehaviour
     private float _roundTimeLeft;
     public float gameTime = 90f;
     private float _gameTimeLeft;
-    public Image timerBar;
-    public Image limitBar;
+
+    private bool pause;
 
     //Test
     //[Header("Score")]
@@ -122,12 +119,14 @@ public class GameManager : MonoBehaviour
 
     private bool RoundTimer()
     {
+        var P_i = PlayerUI.instance;
+
         _roundTimeLeft -= Time.deltaTime;
-        timerBar.fillAmount = _roundTimeLeft / roundTime;
-        timerBar.color = Color.Lerp(Color.red, Color.green, timerBar.fillAmount);
-        limitBar.rectTransform.anchorMin = new Vector2(timerBar.fillAmount, limitBar.rectTransform.anchorMin.y);
-        limitBar.rectTransform.anchorMax = new Vector2(timerBar.fillAmount, limitBar.rectTransform.anchorMax.y);
-        limitBar.rectTransform.anchoredPosition = Vector2.zero;
+        P_i.timerBar.fillAmount = _roundTimeLeft / roundTime;
+        P_i.timerBar.color = Color.Lerp(Color.red, Color.green, P_i.timerBar.fillAmount);
+        P_i.limitBar.rectTransform.anchorMin = new Vector2(P_i.timerBar.fillAmount, P_i.limitBar.rectTransform.anchorMin.y);
+        P_i.limitBar.rectTransform.anchorMax = new Vector2(P_i.timerBar.fillAmount, P_i.limitBar.rectTransform.anchorMax.y);
+        P_i.limitBar.rectTransform.anchoredPosition = Vector2.zero;
         if (_roundTimeLeft <= 0)
         {
             _roundTimeLeft = roundTime;
@@ -197,6 +196,23 @@ public class GameManager : MonoBehaviour
     public int GetRandomPattern()
     {
         return randomPattern;
+    }
+
+    public void Pause()
+    {
+        pause = !pause;
+        if (pause)
+        {
+            state = EnumStateScene.Pause;
+            Time.timeScale = 0;
+            PlayerUI.instance.pauseObject.SetActive(pause);
+        }
+        else
+        {
+            state = EnumStateScene.Level;
+            Time.timeScale = 1;
+            PlayerUI.instance.pauseObject.SetActive(pause);
+        }
     }
 }
 

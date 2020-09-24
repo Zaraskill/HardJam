@@ -57,6 +57,11 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(inputPlayer.GetButtonDown("Pause"))
+        {
+            GameManager.instance.Pause();
+        }
+
         if (GameManager.instance.state == EnumStateScene.Level)
         {
             if (!canHit)
@@ -117,7 +122,7 @@ public class PlayerController : MonoBehaviour
 
     private void CursorRaycast()
     {
-        var mainCam = GameManager.instance.mainCamera;
+        var mainCam = Camera.main;
 
         if (Physics.SphereCast(mainCam.transform.localPosition, raduisSphereCast, (cursor.transform.position - mainCam.transform.position).normalized, out hit, Mathf.Infinity, layerMask))
         {
