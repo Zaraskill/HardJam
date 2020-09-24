@@ -17,7 +17,6 @@ public class UIManager : MonoBehaviour
     public GameObject eventSystem;
     public GameObject firstMenu;
     public GameObject firstOption;
-    [SerializeField] private Toggle[] toggleList;
 
     void Awake()
     {
@@ -33,11 +32,7 @@ public class UIManager : MonoBehaviour
 
     private void Start()
     {
-        toggleList = FindObjectsOfType<Toggle>();
-        foreach (Toggle toggle in toggleList)
-        {
-            toggle.isOn = false;
-        }
+
     }
 
     public void OnClickPlay()
@@ -61,7 +56,16 @@ public class UIManager : MonoBehaviour
 
     public void ToggleScript(int numberToggle)
     {
-        Camera.main.GetComponent<ColorBlindFilter>().mode = (ColorBlindMode) numberToggle;
+        
+        if (!EventSystem.current.currentSelectedGameObject.GetComponent<Toggle>().isOn)
+        {
+            Camera.main.GetComponent<ColorBlindFilter>().mode = (ColorBlindMode) 0;
+        }
+        else
+        {
+            Camera.main.GetComponent<ColorBlindFilter>().mode = (ColorBlindMode)numberToggle;
+        }
+        
     }
 
     public void OnClickQuit()
