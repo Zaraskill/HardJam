@@ -30,4 +30,9 @@ public class SoundManager : MonoBehaviour
     {
         AkSoundEngine.PostEvent("Play_All30sec", gameObject);
     }
+
+    public void PlayPause()
+    {
+        AkSoundEngine.PostEvent("Pause_Musique", gameObject);
+    }
 }

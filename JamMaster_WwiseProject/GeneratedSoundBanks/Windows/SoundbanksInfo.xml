@@ -16,6 +16,7 @@
 			<ShortName>GameSoundBank</ShortName>
 			<Path>GameSoundBank.bnk</Path>
 			<IncludedEvents>
+				<Event Id="2647183201" Name="Pause_Musique" ObjectPath="\Events\Default Work Unit\Pause_Musique" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="1683763229" Name="Play_All30sec" ObjectPath="\Events\Default Work Unit\Play_All30sec" DurationType="OneShot" DurationMin="1.486509" DurationMax="1.835262">
 					<IncludedMemoryFiles>
 						<File Id="508258711" Language="SFX">

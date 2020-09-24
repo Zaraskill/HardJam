@@ -359,6 +359,28 @@
 						</Sound>
 					</ChildrenList>
 				</RandomSequenceContainer>
+				<Sound Name="Pause_Musique" ID="{24F17099-1439-4702-B3D0-6C4A2EA8B678}" ShortID="185969">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B5DE0B01-7DCC-4490-9940-0F078E0E047B}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B419A792-2D4C-46AF-8BB2-76114B8E4007}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Musique" ID="{7004A05F-5013-49E9-B3B2-7996CF3BA6B0}">
+							<Language>SFX</Language>
+							<AudioFile>Musique.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="591835873"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Musique" ID="{7004A05F-5013-49E9-B3B2-7996CF3BA6B0}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

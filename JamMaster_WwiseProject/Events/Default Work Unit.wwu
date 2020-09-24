@@ -58,6 +58,20 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Pause_Musique" ID="{23C6EEEA-08E1-4573-9171-6FCBDA5B1AA7}">
+					<ChildrenList>
+						<Action Name="" ID="{B32FFF35-E98B-4FFE-A148-6F434BDF9714}" ShortID="38528368">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="7"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Pause_Musique" ID="{24F17099-1439-4702-B3D0-6C4A2EA8B678}" WorkUnitID="{5F173690-CBE3-4094-A08D-6659742329A7}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
