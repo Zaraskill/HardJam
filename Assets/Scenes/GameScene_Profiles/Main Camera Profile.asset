@@ -27,13 +27,13 @@ MonoBehaviour:
     value: {x: 0.5, y: 0.5}
   intensity:
     overrideState: 1
-    value: 0.23
+    value: 0.32
   smoothness:
     overrideState: 1
     value: 0.4
   roundness:
     overrideState: 1
-    value: 0.86
+    value: 1
   rounded:
     overrideState: 1
     value: 1
@@ -1481,7 +1481,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 556797029e73b2347956b6579e77e05b, type: 3}
   m_Name: DepthOfField
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   enabled:
     overrideState: 1
     value: 1
@@ -1493,7 +1493,7 @@ MonoBehaviour:
     value: 0.1
   focalLength:
     overrideState: 1
-    value: 1
+    value: 73
   kernelSize:
     overrideState: 1
     value: 1
