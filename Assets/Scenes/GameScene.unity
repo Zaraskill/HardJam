@@ -1221,56 +1221,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3203806490156865734, guid: 59071b81d80c25441b4ae989e7312c80,
         type: 3}
-      propertyPath: propsSpawnPointsArray.Array.data[0]
-      value: 
-      objectReference: {fileID: 837399893}
-    - target: {fileID: 3203806490156865734, guid: 59071b81d80c25441b4ae989e7312c80,
-        type: 3}
-      propertyPath: propsSpawnPointsArray.Array.data[1]
-      value: 
-      objectReference: {fileID: 746296554}
-    - target: {fileID: 3203806490156865734, guid: 59071b81d80c25441b4ae989e7312c80,
-        type: 3}
-      propertyPath: propsSpawnPointsArray.Array.data[2]
-      value: 
-      objectReference: {fileID: 573723769}
-    - target: {fileID: 3203806490156865734, guid: 59071b81d80c25441b4ae989e7312c80,
-        type: 3}
-      propertyPath: propsSpawnPointsArray.Array.data[3]
-      value: 
-      objectReference: {fileID: 1781705518}
-    - target: {fileID: 3203806490156865734, guid: 59071b81d80c25441b4ae989e7312c80,
-        type: 3}
-      propertyPath: propsSpawnPointsArray.Array.data[4]
-      value: 
-      objectReference: {fileID: 1482330253}
-    - target: {fileID: 3203806490156865734, guid: 59071b81d80c25441b4ae989e7312c80,
-        type: 3}
-      propertyPath: propsSpawnPointsArray.Array.data[5]
-      value: 
-      objectReference: {fileID: 1954275605}
-    - target: {fileID: 3203806490156865734, guid: 59071b81d80c25441b4ae989e7312c80,
-        type: 3}
-      propertyPath: propsSpawnPointsArray.Array.data[6]
-      value: 
-      objectReference: {fileID: 968978855}
-    - target: {fileID: 3203806490156865734, guid: 59071b81d80c25441b4ae989e7312c80,
-        type: 3}
-      propertyPath: propsSpawnPointsArray.Array.data[7]
-      value: 
-      objectReference: {fileID: 1907914035}
-    - target: {fileID: 3203806490156865734, guid: 59071b81d80c25441b4ae989e7312c80,
-        type: 3}
-      propertyPath: propsSpawnPointsArray.Array.data[8]
-      value: 
-      objectReference: {fileID: 360951943}
-    - target: {fileID: 3203806490156865734, guid: 59071b81d80c25441b4ae989e7312c80,
-        type: 3}
-      propertyPath: propsSpawnPointsArray.Array.data[9]
-      value: 
-      objectReference: {fileID: 1311921052}
-    - target: {fileID: 3203806490156865734, guid: 59071b81d80c25441b4ae989e7312c80,
-        type: 3}
       propertyPath: plateauTournant
       value: 
       objectReference: {fileID: 1431882622}

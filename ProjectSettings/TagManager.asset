@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Props
   - Impostor
+  - Spawnpoint
   layers:
   - Default
   - TransparentFX

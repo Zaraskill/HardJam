@@ -54,8 +54,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  propsToInstantiate: {fileID: 5902761628978566939, guid: 525526e5b3fc90c49abff3b1e6522569,
-    type: 3}
   occupiedSpawnPoints: 
   maxPropsInLevel: 5
   mainCamera: {fileID: 0}
@@ -71,10 +69,16 @@ MonoBehaviour:
     - {fileID: 68078186675178493, guid: 68620825e96e7c746be94f329a9e96bc, type: 3}
     - {fileID: 172461772635031678, guid: 8015cdf078e4c444bbf35061268513ed, type: 3}
   instanceLevels:
-  - {fileID: 3812068917498774869, guid: 379ccb4cd8197b94bb3495d146038fb8, type: 3}
-  - {fileID: 8084047057655524003, guid: 7af69bd622d799d4684b5c6c88e859bd, type: 3}
-  - {fileID: 5004350840154901398, guid: 5297de8bb903a37408011ead676b0980, type: 3}
-  - {fileID: 8566353702363567404, guid: 5008cbf8d4ce3fd4e8cd59609237acba, type: 3}
+  - {fileID: 6440896073935065865, guid: 4ddfecd864f8a6647881d1d957abb2ec, type: 3}
+  - {fileID: 842976336958677262, guid: 4c3f08f433b36124eb1f090524789a7d, type: 3}
+  - {fileID: 5189426765856529643, guid: 037cd12cd85b5534696119d2d34f298a, type: 3}
+  - {fileID: 4103518752200355268, guid: 245ca7bb56c265241a9a8f9b41de1931, type: 3}
+  - {fileID: 7464504662798220676, guid: 6710bed4044456346b1706ec7f8b9fab, type: 3}
+  - {fileID: 7402361923589976821, guid: d1852fd66614b364e81101eddcf6bff0, type: 3}
+  - {fileID: 8892154537289620517, guid: 5e5cafca8bfefbe4b918ba1b13d5d795, type: 3}
+  - {fileID: 8293106548504044749, guid: 7828af062d4d9694bbc8436f618ece71, type: 3}
+  - {fileID: 7187522044530834300, guid: d2eab46058869f14987b021c6385778c, type: 3}
+  - {fileID: 1764179499045811801, guid: d5e46a0ee633ac54298afcacee1d45e6, type: 3}
   patterns:
   - {fileID: 11400000, guid: 538e13bdff4ed0f4788e9b4b9e65ddd3, type: 2}
   plateauTournant: {fileID: 0}

@@ -1,14 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
-    public Transform[] propsSpawnPointsArray;
-    public GameObject propsToInstantiate;
+    public GameObject[] propsSpawnPointsArray;
     public List<int> occupiedSpawnPoints;
     public int maxPropsInLevel = 5;
 
@@ -61,10 +62,16 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Init();
+    }
+
+    void Init()
+    {
         _roundTimeLeft = roundTime;
         _gameTimeLeft = gameTime;
-        SpawnProps();
         instanceLevel = Instantiate(instanceLevels[Random.Range(0, instanceLevels.Capacity)], plateauTournant.transform);
+        propsSpawnPointsArray = GameObject.FindGameObjectsWithTag("Spawnpoint");
+        SpawnProps();        
     }
 
     // Update is called once per frame
@@ -137,16 +144,31 @@ public class GameManager : MonoBehaviour
 
     public void NextRound()
     {
+        StartCoroutine(_CoroutineNextRound());
+    }
+
+    IEnumerator _CoroutineNextRound()
+    {
         GameObject objToInstantiate = instanceLevels[Random.Range(0, instanceLevels.Capacity)];
         _roundTimeLeft = roundTime;
         randomPattern = Random.Range(0, patterns.Capacity);
-        Destroy(instanceLevel.gameObject);
+        propsSpawnPointsArray = Array.Empty<GameObject>();
+        Destroy(instanceLevel.gameObject);        
+        yield return new WaitForEndOfFrame();
+
         instanceLevel = Instantiate(objToInstantiate, plateauTournant.transform);
+
         DestroyProps();
+        propsSpawnPointsArray = GameObject.FindGameObjectsWithTag("Spawnpoint");
+
+
         SpawnProps();
 
+
+
+
         colorIndex++;
-        if(colorIndex >= bgColorsList.Capacity)
+        if (colorIndex >= bgColorsList.Capacity)
         {
             colorIndex = 0;
         }
