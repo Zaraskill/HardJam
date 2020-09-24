@@ -26,6 +26,7 @@ public class UIManager : MonoBehaviour
     public GameObject button;
     public float timerWait;
     private float timer;
+    private int typeBlindness;
 
 
     void Awake()
@@ -33,6 +34,7 @@ public class UIManager : MonoBehaviour
         if (instance == null)
         {
             instance = this;
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
@@ -48,63 +50,71 @@ public class UIManager : MonoBehaviour
 
     private void Update()
     {
-        if (optionsMenu.activeInHierarchy)
+        if (SceneManager.GetSceneByBuildIndex(0) == SceneManager.GetActiveScene())
         {
-            foreach (Player player in listPlayers)
+            if (optionsMenu.activeInHierarchy)
             {
-                if (player.GetButtonDown("UICancel"))
-                {
-                    mainMenu.SetActive(true);
-                    optionsMenu.SetActive(false);
-                    EventSystem.current.SetSelectedGameObject(firstMenu);
-                }
-            }
-        }        
-        else if (mainMenu.activeInHierarchy)
-        {
-            if(EventSystem.current.currentSelectedGameObject == playButton)
-            {
-                playButton.GetComponent<RectTransform>().localScale = new Vector3(1.2f, 1, 1);
-                optButton.GetComponent<RectTransform>().localScale = new Vector3(1f, 1, 1);
-                quitButton.GetComponent<RectTransform>().localScale = new Vector3(1f, 1, 1);
-            }
-            else if (EventSystem.current.currentSelectedGameObject == optButton)
-            {
-                optButton.GetComponent<RectTransform>().localScale = new Vector3(1.2f, 1, 1);
-                playButton.GetComponent<RectTransform>().localScale = new Vector3(1f, 1, 1);
-                quitButton.GetComponent<RectTransform>().localScale = new Vector3(1f, 1, 1);
-            }
-            else if (EventSystem.current.currentSelectedGameObject == quitButton)
-            {
-                quitButton.GetComponent<RectTransform>().localScale = new Vector3(1.2f, 1, 1);
-                optButton.GetComponent<RectTransform>().localScale = new Vector3(1f, 1, 1);
-                playButton.GetComponent<RectTransform>().localScale = new Vector3(1f, 1, 1);
-            }
-        }
-        else if (tutorial.activeInHierarchy)
-        {
-            timer -= Time.deltaTime;
-            if (timer <= 0)
-            {
-                button.SetActive(true);
                 foreach (Player player in listPlayers)
                 {
-                    if (player.GetButtonDown("UISubmit"))
+                    if (player.GetButtonDown("UICancel"))
                     {
-                        if (tutoTwo.activeInHierarchy)
+                        mainMenu.SetActive(true);
+                        optionsMenu.SetActive(false);
+                        EventSystem.current.SetSelectedGameObject(firstMenu);
+                    }
+                }
+            }
+            else if (mainMenu.activeInHierarchy)
+            {
+                if (EventSystem.current.currentSelectedGameObject == playButton)
+                {
+                    playButton.GetComponent<RectTransform>().localScale = new Vector3(1.2f, 1, 1);
+                    optButton.GetComponent<RectTransform>().localScale = new Vector3(1f, 1, 1);
+                    quitButton.GetComponent<RectTransform>().localScale = new Vector3(1f, 1, 1);
+                }
+                else if (EventSystem.current.currentSelectedGameObject == optButton)
+                {
+                    optButton.GetComponent<RectTransform>().localScale = new Vector3(1.2f, 1, 1);
+                    playButton.GetComponent<RectTransform>().localScale = new Vector3(1f, 1, 1);
+                    quitButton.GetComponent<RectTransform>().localScale = new Vector3(1f, 1, 1);
+                }
+                else if (EventSystem.current.currentSelectedGameObject == quitButton)
+                {
+                    quitButton.GetComponent<RectTransform>().localScale = new Vector3(1.2f, 1, 1);
+                    optButton.GetComponent<RectTransform>().localScale = new Vector3(1f, 1, 1);
+                    playButton.GetComponent<RectTransform>().localScale = new Vector3(1f, 1, 1);
+                }
+            }
+            else if (tutorial.activeInHierarchy)
+            {
+                timer -= Time.deltaTime;
+                if (timer <= 0)
+                {
+                    button.SetActive(true);
+                    foreach (Player player in listPlayers)
+                    {
+                        if (player.GetButtonDown("UISubmit"))
                         {
-                            SceneManager.LoadScene(1);
-                        }
-                        else
-                        {
-                            tutoTwo.SetActive(true);
-                            button.SetActive(false);
-                            timer = timerWait;
+                            if (tutoTwo.activeInHierarchy)
+                            {
+                                SceneManager.LoadScene(1);
+                            }
+                            else
+                            {
+                                tutoTwo.SetActive(true);
+                                button.SetActive(false);
+                                timer = timerWait;
+                            }
                         }
                     }
                 }
             }
         }
+        else
+        {
+            Camera.main.GetComponent<ColorBlindFilter>().mode = (ColorBlindMode)typeBlindness;
+        }
+        
     }
 
     public void OnClickPlay()
@@ -125,14 +135,14 @@ public class UIManager : MonoBehaviour
 
     public void ToggleScript(int numberToggle)
     {
-        
         if (!EventSystem.current.currentSelectedGameObject.GetComponent<Toggle>().isOn)
         {
             Camera.main.GetComponent<ColorBlindFilter>().mode = (ColorBlindMode) 0;
-            
+            typeBlindness = 0;
         }
         else
         {
+            typeBlindness = numberToggle;
             Camera.main.GetComponent<ColorBlindFilter>().mode = (ColorBlindMode)numberToggle;
         }
         
