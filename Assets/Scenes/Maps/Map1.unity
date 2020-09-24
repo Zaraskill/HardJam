@@ -3181,6 +3181,10 @@ MonoBehaviour:
   - {r: 1, g: 0.6401813, b: 0, a: 0}
   - {r: 1, g: 0.4077799, b: 0, a: 0}
   timerSwitch: 1
+  magnitude: 0
+  roughness: 0
+  fadeIn: 0
+  fadeOut: 0
 --- !u!114 &963194230
 MonoBehaviour:
   m_ObjectHideFlags: 0

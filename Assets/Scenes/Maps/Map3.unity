@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 75193233}
   m_Layer: 0
   m_Name: GameObject (2)
-  m_TagString: Untagged
+  m_TagString: Spawnpoint
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -765,7 +765,7 @@ GameObject:
   - component: {fileID: 205593060}
   m_Layer: 0
   m_Name: GameObject (8)
-  m_TagString: Untagged
+  m_TagString: Spawnpoint
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3355,7 +3355,7 @@ GameObject:
   - component: {fileID: 782543751}
   m_Layer: 0
   m_Name: GameObject
-  m_TagString: Untagged
+  m_TagString: Spawnpoint
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4002,7 +4002,7 @@ GameObject:
   - component: {fileID: 889827270}
   m_Layer: 0
   m_Name: GameObject (4)
-  m_TagString: Untagged
+  m_TagString: Spawnpoint
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4536,6 +4536,10 @@ MonoBehaviour:
   - {r: 1, g: 0.6401813, b: 0, a: 0}
   - {r: 1, g: 0.4077799, b: 0, a: 0}
   timerSwitch: 1
+  magnitude: 0
+  roughness: 0
+  fadeIn: 0
+  fadeOut: 0
 --- !u!20 &1008160005
 Camera:
   m_ObjectHideFlags: 0
@@ -4735,7 +4739,7 @@ GameObject:
   - component: {fileID: 1061812347}
   m_Layer: 0
   m_Name: GameObject (1)
-  m_TagString: Untagged
+  m_TagString: Spawnpoint
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5074,6 +5078,10 @@ MonoBehaviour:
   - {r: 1, g: 0.6401813, b: 0, a: 0}
   - {r: 1, g: 0.4077799, b: 0, a: 0}
   timerSwitch: 1
+  magnitude: 0
+  roughness: 0
+  fadeIn: 0
+  fadeOut: 0
 --- !u!20 &1151499821
 Camera:
   m_ObjectHideFlags: 0
@@ -5394,7 +5402,7 @@ GameObject:
   - component: {fileID: 1341283956}
   m_Layer: 0
   m_Name: GameObject (6)
-  m_TagString: Untagged
+  m_TagString: Spawnpoint
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6483,7 +6491,7 @@ GameObject:
   - component: {fileID: 1657608717}
   m_Layer: 0
   m_Name: GameObject (7)
-  m_TagString: Untagged
+  m_TagString: Spawnpoint
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6782,7 +6790,7 @@ GameObject:
   - component: {fileID: 1709698689}
   m_Layer: 0
   m_Name: GameObject (5)
-  m_TagString: Untagged
+  m_TagString: Spawnpoint
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
