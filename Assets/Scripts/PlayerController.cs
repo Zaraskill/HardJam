@@ -88,11 +88,13 @@ public class PlayerController : MonoBehaviour
         {
             if (inputPlayer.GetButtonDown("Restart"))
             {
+                SoundManager.instance.StopMusic();
                 SceneManager.LoadScene("GameScene");
                 //GameManager.instance.Init();
             }
             else if (inputPlayer.GetButtonDown("Return"))
             {
+                SoundManager.instance.StopMusic();
                 SceneManager.LoadScene("Menu");
                 GameManager.instance.state = EnumStateScene.Menu;
             }
