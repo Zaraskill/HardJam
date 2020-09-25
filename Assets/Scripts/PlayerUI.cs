@@ -13,6 +13,9 @@ public class PlayerUI : MonoBehaviour
     public Image timerBar;
     public Image limitBar;
 
+    public Image panelScoreJ1;
+    public Image panelScoreJ2;
+
     public Text lauchLevelText;
     public Image FondLauchLevel;
 

@@ -154,6 +154,14 @@ public class PlayerController : MonoBehaviour
                 score++;
                 OnHitSomeonePlayThis(true);
                 SoundManager.instance.PlayYes();
+                if (_PlayerId == 0)
+                {
+                    PlayerUI.instance.panelScoreJ1.GetComponent<Animator>().SetBool("Change", !PlayerUI.instance.panelScoreJ1.GetComponent<Animator>().GetBool("Change"));
+                }
+                else
+                {
+                    PlayerUI.instance.panelScoreJ2.GetComponent<Animator>().SetBool("Change", !PlayerUI.instance.panelScoreJ2.GetComponent<Animator>().GetBool("Change"));
+                }
             }
             else
             {
