@@ -66,7 +66,7 @@
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Pause_Musique" ID="{24F17099-1439-4702-B3D0-6C4A2EA8B678}" WorkUnitID="{5F173690-CBE3-4094-A08D-6659742329A7}"/>
+									<ObjectRef Name="Musique" ID="{EA5AE458-4388-4820-960A-8C36D0E9779A}" WorkUnitID="{5F173690-CBE3-4094-A08D-6659742329A7}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
