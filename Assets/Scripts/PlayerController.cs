@@ -7,6 +7,9 @@ using EZCameraShake;
 
 public class PlayerController : MonoBehaviour
 {
+
+    public static bool hasClicked = false;
+
     [Header("Rewired Player Settings")]
     public int _PlayerId;
     private Rewired.Player inputPlayer;
@@ -77,7 +80,7 @@ public class PlayerController : MonoBehaviour
             }
             else
             {
-                if (inputPlayer.GetButtonDown("Select"))
+                if (inputPlayer.GetButtonDown("Select") && !hasClicked)
                 {
                     CursorRaycast();
                 }
@@ -151,6 +154,7 @@ public class PlayerController : MonoBehaviour
                 OnHitSomeonePlayThis(false);
             }
             ScoreUpdateText();
+            hasClicked = false;
             GameManager.instance.NextRound();
         }
 //#if UNITY_EDITOR
