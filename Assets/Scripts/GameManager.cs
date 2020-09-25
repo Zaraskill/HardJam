@@ -37,7 +37,8 @@ public class GameManager : MonoBehaviour
     private bool pause;
 
     [SerializeField] private PostProcessVolume postProcess;
-    [SerializeField] DepthOfField depthOfField;
+    DepthOfField depthOfField;
+    Vignette vignette;
 
     //Test
     //[Header("Score")]
@@ -70,6 +71,8 @@ public class GameManager : MonoBehaviour
     {
         postProcess.profile.TryGetSettings(out depthOfField);
         depthOfField.active = false;
+        postProcess.profile.TryGetSettings(out vignette);
+        vignette.active = false;
         Init();
     }
 
@@ -147,6 +150,7 @@ public class GameManager : MonoBehaviour
         if(Mathf.FloorToInt(_gameTimeLeft) == 30 && !is30SecDone)
         {
             SoundManager.instance.Play30sec();
+            vignette.active = true;
             is30SecDone = true;
         }
         if(_gameTimeLeft <= 0)
