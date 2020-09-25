@@ -6,7 +6,7 @@ public class SceneRotation : MonoBehaviour
 {
     public float rotationSpeed;
 
-    private void Awake()
+    private void Start()
     {
         GameManager.instance.plateauTournant = this.gameObject;
     }
