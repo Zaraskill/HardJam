@@ -16,6 +16,7 @@
 						<ObjectRef Name="Yess" ID="{7F0DDBC8-72B1-4C09-BA29-EF8C53092028}" WorkUnitID="{5F173690-CBE3-4094-A08D-6659742329A7}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Next1" ID="{473F1DD6-42F1-4C78-92F3-1B1EC1C07466}" WorkUnitID="{5F173690-CBE3-4094-A08D-6659742329A7}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Next3" ID="{369A18B6-84D2-4C9A-9D25-8A72AF5D8A3A}" WorkUnitID="{5F173690-CBE3-4094-A08D-6659742329A7}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_Musique" ID="{062B1B42-E072-4D09-B713-2CF3A9C72096}" WorkUnitID="{307A8B5A-CF70-41FC-AEE3-79D58C5A6EC1}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Musique" ID="{1F4E050C-F340-4D24-B012-DA977E0BCAE8}" WorkUnitID="{307A8B5A-CF70-41FC-AEE3-79D58C5A6EC1}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
