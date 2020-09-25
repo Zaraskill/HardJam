@@ -26,7 +26,7 @@ public class UIManager : MonoBehaviour
     public GameObject button;
     public float timerWait;
     private float timer;
-    private int typeBlindness;
+    [HideInInspector] public int typeBlindness;
     public List<Toggle> togglesBlindness;
 
 
@@ -41,6 +41,7 @@ public class UIManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        typeBlindness = PlayerPrefs.GetInt("ColorBlindness", 0);
     }
 
     private void Start()

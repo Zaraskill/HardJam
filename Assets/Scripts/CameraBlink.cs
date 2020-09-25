@@ -25,6 +25,7 @@ public class CameraBlink : MonoBehaviour
         _timeLeft = timerSwitch;
         cam = gameObject.GetComponent<Camera>();
         cam.backgroundColor = backgroundColorList[0];
+        Camera.main.GetComponent<ColorBlindFilter>().mode = (ColorBlindMode)UIManager.instance.typeBlindness;
     }
 
     // Update is called once per frame
