@@ -48,6 +48,10 @@ public class UIManager : MonoBehaviour
         togglesBlindness[PlayerPrefs.GetInt("ColorBlindness", 0)].isOn = true;
         listPlayers = ReInput.players.AllPlayers;
         timer = timerWait;
+        sliderVolume.value = PlayerPrefs.GetFloat("Music", 75);
+        sliderSfx.value = PlayerPrefs.GetFloat("SFX", 75);
+        AkSoundEngine.SetRTPCValue("Music", PlayerPrefs.GetFloat("Music", 75));
+        AkSoundEngine.SetRTPCValue("SFX", PlayerPrefs.GetFloat("SFX", 75));
     }
 
     private void Update()
@@ -160,11 +164,15 @@ public class UIManager : MonoBehaviour
     public void SlideVolume()
     {
         float valueVolume = sliderVolume.value;
+        PlayerPrefs.SetFloat("Music", valueVolume);
+        AkSoundEngine.SetRTPCValue("Music", valueVolume);
     }
 
     public void SlideSfx()
     {
         float valueSfx = sliderSfx.value;
+        PlayerPrefs.SetFloat("SFX", valueSfx);
+        AkSoundEngine.SetRTPCValue("SFX", valueSfx);
     }
 
     public void OnCancel()
