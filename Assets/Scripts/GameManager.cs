@@ -222,12 +222,14 @@ public class GameManager : MonoBehaviour
             state = EnumStateScene.Pause;
             Time.timeScale = 0;
             PlayerUI.instance.pauseObject.SetActive(pause);
+            SoundManager.instance.PlayPause();
         }
         else
         {
             state = EnumStateScene.Level;
             Time.timeScale = 1;
             PlayerUI.instance.pauseObject.SetActive(pause);
+            SoundManager.instance.Resume();
         }
     }
 
