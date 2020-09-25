@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour
 
     private bool pause;
 
-    [SerializeField] private PostProcessVolume postProcess;
+    [HideInInspector] public PostProcessVolume postProcess;
     DepthOfField depthOfField;
     Vignette vignette;
 
@@ -57,7 +57,7 @@ public class GameManager : MonoBehaviour
         if (instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(this.gameObject);
+            //DontDestroyOnLoad(this.gameObject);
         }
         else
         {
@@ -69,21 +69,23 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Init();
+    }
+
+    public void Init()
+    {
         postProcess.profile.TryGetSettings(out depthOfField);
         depthOfField.active = false;
         postProcess.profile.TryGetSettings(out vignette);
         vignette.active = false;
-        Init();
-    }
 
-    void Init()
-    {
         state = EnumStateScene.StartLevel;
         _roundTimeLeft = roundTime;
         _gameTimeLeft = gameTime;
         instanceLevel = Instantiate(instanceLevels[Random.Range(0, instanceLevels.Capacity)], plateauTournant.transform);
         propsSpawnPointsArray = GameObject.FindGameObjectsWithTag("Spawnpoint");
         SpawnProps();
+        StopCoroutine(StartLevelText());
         StartCoroutine(StartLevelText());
     }
 
@@ -231,8 +233,6 @@ public class GameManager : MonoBehaviour
 
     IEnumerator StartLevelText()
     {
-        PlayerUI.instance.lauchLevelText.gameObject.SetActive(true);
-        PlayerUI.instance.FondLauchLevel.gameObject.SetActive(true);
         var P_anim = PlayerUI.instance.lauchLevelText.gameObject.GetComponent<Animator>();
         P_anim.SetInteger("LevelStartTextInt", 0);
         yield return new WaitForSeconds(1.1f);

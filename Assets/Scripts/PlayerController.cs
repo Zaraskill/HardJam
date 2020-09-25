@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using Rewired;
 using EZCameraShake;
@@ -60,11 +61,6 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(inputPlayer.GetButtonDown("Pause"))
-        {
-            GameManager.instance.Pause();
-        }
-
         if (GameManager.instance.state == EnumStateScene.Level)
         {
             if (!canHit)
@@ -87,6 +83,28 @@ public class PlayerController : MonoBehaviour
             }
 
             CursorMovement();
+        }
+        else if (GameManager.instance.state == EnumStateScene.FinalScore)
+        {
+            if (inputPlayer.GetButtonDown("Restart"))
+            {
+                SceneManager.LoadScene("GameScene");
+                //GameManager.instance.Init();
+            }
+            else if (inputPlayer.GetButtonDown("Return"))
+            {
+                SceneManager.LoadScene("Menu");
+                GameManager.instance.state = EnumStateScene.Menu;
+            }
+        }
+
+        if (GameManager.instance.state == EnumStateScene.Level || GameManager.instance.state == EnumStateScene.Pause)
+        {
+
+            if (inputPlayer.GetButtonDown("Pause"))
+            {
+                GameManager.instance.Pause();
+            }
         }
     }
 
