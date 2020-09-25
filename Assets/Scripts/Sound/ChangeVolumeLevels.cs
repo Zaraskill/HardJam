@@ -29,7 +29,7 @@ public class ChangeVolumeLevels : MonoBehaviour
         if (whatValue == "Master")
         {
             masterVolume = thisSlider.value;
-            AkSoundEngine.SetRTPCValue("MasterVolume", masterVolume)
+            AkSoundEngine.SetRTPCValue("MasterVolume", masterVolume);
         }
 
     }   

@@ -72,6 +72,20 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Resume_Musique" ID="{985EC541-A268-47D3-B59B-8D1AF00A2473}">
+					<ChildrenList>
+						<Action Name="" ID="{7255A4E6-A457-499A-B67E-EBA38AB1392B}" ShortID="798797586">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="9"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Musique" ID="{EA5AE458-4388-4820-960A-8C36D0E9779A}" WorkUnitID="{5F173690-CBE3-4094-A08D-6659742329A7}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
