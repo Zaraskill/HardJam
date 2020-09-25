@@ -5,6 +5,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	2479810432	Play_AllYes			\Default Work Unit\Play_AllYes	
 	2628502312	Play_AllNext			\Default Work Unit\Play_AllNext	
 	2647183201	Pause_Musique			\Default Work Unit\Pause_Musique	
+	3346619540	Resume_Musique			\Default Work Unit\Resume_Musique	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	33366193	Next1	D:\IIM\Unity\HardJam\JamMaster_WwiseProject\.cache\Mac\SFX\Next1_10C4C929.wem		\Actor-Mixer Hierarchy\Scene\AllNext\Next1		113772

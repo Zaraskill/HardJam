@@ -3,14 +3,14 @@
 	<Busses>
 		<WorkUnit Name="Default Work Unit" ID="{B419A792-2D4C-46AF-8BB2-76114B8E4007}" PersistMode="Standalone">
 			<ChildrenList>
-				<Bus Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}">
+				<Bus Name="Music" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}">
 					<PropertyList>
 						<Property Name="Volume" Type="Real64">
 							<RTPCList>
 								<RTPC Name="" ID="{132CFF61-4924-4A28-BD9C-9405A412FCDA}" ShortID="91988097">
 									<ReferenceList>
 										<Reference Name="ControlInput">
-											<ObjectRef Name="MasterVolume" ID="{66D385F7-4137-4234-9DC0-E674EABDA120}" WorkUnitID="{88BEC65D-D25E-426C-AE69-B47594F3EBE9}"/>
+											<ObjectRef Name="Music" ID="{66D385F7-4137-4234-9DC0-E674EABDA120}" WorkUnitID="{88BEC65D-D25E-426C-AE69-B47594F3EBE9}"/>
 										</Reference>
 									</ReferenceList>
 									<Curve Name="" ID="{EAAB243A-C6B7-45AC-812D-A0D094611BD0}">
@@ -41,6 +41,36 @@
 					</ReferenceList>
 				</Bus>
 				<Bus Name="SFX" ID="{8AD4D7F8-EC3A-483A-B4D5-FB37C3595F12}">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<RTPCList>
+								<RTPC Name="" ID="{5556A971-7A9C-43AC-9D06-6161242ABAC5}" ShortID="515191121">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="SFX" ID="{32F21C27-E185-4422-987A-3CD5FE0236F9}" WorkUnitID="{88BEC65D-D25E-426C-AE69-B47594F3EBE9}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{A1CF2F10-17F8-4F34-9D2D-EB8BBF2945A7}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="3"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>-200</YPos>
+												<Flags>5</Flags>
+											</Point>
+											<Point>
+												<XPos>100</XPos>
+												<YPos>0</YPos>
+												<Flags>37</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+							</RTPCList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="AudioDevice">
 							<ObjectRef Name="System" ID="{931C45A2-6E82-48D3-A750-619CD971520B}" WorkUnitID="{011619F8-9362-472C-8A6D-31174D64A683}"/>

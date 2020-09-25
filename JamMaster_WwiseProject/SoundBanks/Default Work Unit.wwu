@@ -11,6 +11,7 @@
 						<ObjectRef Name="Yeah" ID="{C51FD19E-314C-4478-99FF-19A4ECE8CD6D}" WorkUnitID="{5F173690-CBE3-4094-A08D-6659742329A7}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Pause_Musique" ID="{23C6EEEA-08E1-4573-9171-6FCBDA5B1AA7}" WorkUnitID="{307A8B5A-CF70-41FC-AEE3-79D58C5A6EC1}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_AllNext" ID="{7B54D1AD-9165-4614-B451-E62F4A2297C3}" WorkUnitID="{307A8B5A-CF70-41FC-AEE3-79D58C5A6EC1}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Resume_Musique" ID="{985EC541-A268-47D3-B59B-8D1AF00A2473}" WorkUnitID="{307A8B5A-CF70-41FC-AEE3-79D58C5A6EC1}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Next2" ID="{FFE1C7A8-4206-4A92-B493-34E600D616D7}" WorkUnitID="{5F173690-CBE3-4094-A08D-6659742329A7}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Yess" ID="{7F0DDBC8-72B1-4C09-BA29-EF8C53092028}" WorkUnitID="{5F173690-CBE3-4094-A08D-6659742329A7}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Next1" ID="{473F1DD6-42F1-4C78-92F3-1B1EC1C07466}" WorkUnitID="{5F173690-CBE3-4094-A08D-6659742329A7}" Origin="Manual" Filter="7"/>
