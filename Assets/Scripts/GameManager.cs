@@ -155,6 +155,7 @@ public class GameManager : MonoBehaviour
             SoundManager.instance.Play30sec();
             vignette.active = true;
             is30SecDone = true;
+            PlayerUI.instance._30sec.gameObject.SetActive(true);
         }
         if(_gameTimeLeft <= 0)
         {

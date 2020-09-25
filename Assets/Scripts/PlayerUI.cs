@@ -21,6 +21,8 @@ public class PlayerUI : MonoBehaviour
 
     public PostProcessVolume postProcess;
 
+    public Image _30sec;
+
     private void Awake()
     {
         if (instance == null)
@@ -36,5 +38,6 @@ public class PlayerUI : MonoBehaviour
         FondLauchLevel.gameObject.SetActive(true);
         lauchLevelText.gameObject.SetActive(true);
         lauchLevelText.gameObject.GetComponent<Animator>().SetInteger("LevelStartTextInt", 0);
+        _30sec.gameObject.SetActive(false);
     }
 }
