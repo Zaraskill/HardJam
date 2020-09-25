@@ -45,4 +45,9 @@ public class SoundManager : MonoBehaviour
     {
         AkSoundEngine.PostEvent("Resume_Musique", gameObject);
     }
+
+    public void StopMusic()
+    {
+        AkSoundEngine.PostEvent("Stop_Musique", gameObject);
+    }
 }

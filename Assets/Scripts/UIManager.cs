@@ -103,6 +103,7 @@ public class UIManager : MonoBehaviour
                         {
                             if (tutoTwo.activeInHierarchy)
                             {
+                                SoundManager.instance.StopMusic();
                                 SceneManager.LoadScene(1);
                             }
                             else
