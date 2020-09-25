@@ -12,6 +12,9 @@ public class PlayerUI : MonoBehaviour
     public Image timerBar;
     public Image limitBar;
 
+    public Text lauchLevelText;
+    public Image FondLauchLevel;
+
     private void Awake()
     {
         if (instance == null)
@@ -22,5 +25,6 @@ public class PlayerUI : MonoBehaviour
         {
             Destroy(this);
         }
+        lauchLevelText.gameObject.SetActive(false);
     }
 }

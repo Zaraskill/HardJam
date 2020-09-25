@@ -78,12 +78,13 @@ public class GameManager : MonoBehaviour
 
     void Init()
     {
-        state = EnumStateScene.Level;
+        state = EnumStateScene.StartLevel;
         _roundTimeLeft = roundTime;
         _gameTimeLeft = gameTime;
         instanceLevel = Instantiate(instanceLevels[Random.Range(0, instanceLevels.Capacity)], plateauTournant.transform);
         propsSpawnPointsArray = GameObject.FindGameObjectsWithTag("Spawnpoint");
-        SpawnProps();        
+        SpawnProps();
+        StartCoroutine(StartLevelText());
     }
 
     // Update is called once per frame
@@ -226,6 +227,27 @@ public class GameManager : MonoBehaviour
             Time.timeScale = 1;
             PlayerUI.instance.pauseObject.SetActive(pause);
         }
+    }
+
+    IEnumerator StartLevelText()
+    {
+        PlayerUI.instance.lauchLevelText.gameObject.SetActive(true);
+        PlayerUI.instance.FondLauchLevel.gameObject.SetActive(true);
+        var P_anim = PlayerUI.instance.lauchLevelText.gameObject.GetComponent<Animator>();
+        P_anim.SetInteger("LevelStartTextInt", 0);
+        yield return new WaitForSeconds(1.1f);
+        PlayerUI.instance.lauchLevelText.text = "2";
+        P_anim.SetInteger("LevelStartTextInt", 1);
+        yield return new WaitForSeconds(1.1f);
+        PlayerUI.instance.lauchLevelText.text = "1";
+        P_anim.SetInteger("LevelStartTextInt", 2);
+        yield return new WaitForSeconds(1.1f);
+        PlayerUI.instance.lauchLevelText.text = "GO";
+        P_anim.SetInteger("LevelStartTextInt", 3);
+        yield return new WaitForSeconds(0.9f);
+        PlayerUI.instance.lauchLevelText.gameObject.SetActive(false);
+        PlayerUI.instance.FondLauchLevel.gameObject.SetActive(false);
+        state = EnumStateScene.Level;
     }
 }
 

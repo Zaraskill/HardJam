@@ -6,6 +6,7 @@ public enum EnumStateScene{
     Menu,
     Tutorial,
     Pause,
+    StartLevel,
     Level,
     FinalScore,
 }
