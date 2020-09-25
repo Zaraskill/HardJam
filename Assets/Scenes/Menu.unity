@@ -690,8 +690,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 505.69635, y: -146.39493}
-  m_SizeDelta: {x: 1011.3927, y: 292.78986}
+  m_AnchoredPosition: {x: 398, y: -210}
+  m_SizeDelta: {x: 796, y: 420}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &444358080
 MonoBehaviour:
@@ -712,7 +712,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 17edb9fb39737274ea56f85299145762, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -852,6 +852,7 @@ GameObject:
   - component: {fileID: 455646789}
   - component: {fileID: 455646786}
   - component: {fileID: 455646790}
+  - component: {fileID: 455646791}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -882,7 +883,7 @@ Camera:
   m_GameObject: {fileID: 455646785}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
+  m_ClearFlags: 2
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
@@ -966,6 +967,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mode: 0
   showDifference: 0
+--- !u!114 &455646791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 455646785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea39b3cfc56c8934aaf25b1f1f4f33fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  backgroundColorList:
+  - {r: 0.972549, g: 0.38431373, b: 0.19607843, a: 0}
+  - {r: 0.99215686, g: 0.7254902, b: 0.22745098, a: 0}
+  timerSwitch: 1
+  magnitude: 0
+  roughness: 0
+  fadeIn: 0
+  fadeOut: 0
 --- !u!1 &474415980
 GameObject:
   m_ObjectHideFlags: 0
@@ -2464,7 +2485,7 @@ MonoBehaviour:
   sliderVolume: {fileID: 2144236036}
   sliderSfx: {fileID: 887629890}
   firstMenu: {fileID: 2049210383}
-  firstOption: {fileID: 474415980}
+  firstOption: {fileID: 2144236034}
   playButton: {fileID: 747804710}
   optButton: {fileID: 2049210383}
   quitButton: {fileID: 1090322484}
@@ -2472,6 +2493,16 @@ MonoBehaviour:
   tutoTwo: {fileID: 70436002}
   button: {fileID: 1591968057}
   timerWait: 2
+  togglesBlindness:
+  - {fileID: 474415982}
+  - {fileID: 1967433721}
+  - {fileID: 1829339043}
+  - {fileID: 544907160}
+  - {fileID: 1286748570}
+  - {fileID: 455543703}
+  - {fileID: 1255824592}
+  - {fileID: 2015712683}
+  - {fileID: 1295191773}
 --- !u!4 &1280462000
 Transform:
   m_ObjectHideFlags: 0

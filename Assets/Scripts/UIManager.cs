@@ -27,6 +27,7 @@ public class UIManager : MonoBehaviour
     public float timerWait;
     private float timer;
     private int typeBlindness;
+    public List<Toggle> togglesBlindness;
 
 
     void Awake()
@@ -44,6 +45,7 @@ public class UIManager : MonoBehaviour
 
     private void Start()
     {
+        togglesBlindness[PlayerPrefs.GetInt("ColorBlindness", 0)].isOn = true;
         listPlayers = ReInput.players.AllPlayers;
         timer = timerWait;
     }
@@ -135,15 +137,17 @@ public class UIManager : MonoBehaviour
 
     public void ToggleScript(int numberToggle)
     {
-        if (!EventSystem.current.currentSelectedGameObject.GetComponent<Toggle>().isOn)
-        {
-            Camera.main.GetComponent<ColorBlindFilter>().mode = (ColorBlindMode) 0;
-            typeBlindness = 0;
-        }
-        else
+        if (mainMenu.activeInHierarchy || EventSystem.current.currentSelectedGameObject.GetComponent<Toggle>().isOn)
         {
             typeBlindness = numberToggle;
             Camera.main.GetComponent<ColorBlindFilter>().mode = (ColorBlindMode)numberToggle;
+            PlayerPrefs.SetInt("ColorBlindness", numberToggle);
+        }
+        else
+        {            
+            Camera.main.GetComponent<ColorBlindFilter>().mode = (ColorBlindMode)0;
+            PlayerPrefs.SetInt("ColorBlindness", 0);
+            typeBlindness = 0;
         }
         
     }

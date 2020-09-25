@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using EZCameraShake;
+using UnityEngine.SceneManagement;
 
 public class CameraBlink : MonoBehaviour
 {
@@ -29,7 +30,14 @@ public class CameraBlink : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameManager.instance.state == EnumStateScene.Level)
+        if(SceneManager.GetSceneByBuildIndex(0) == SceneManager.GetActiveScene())
+        {
+            if (UpdateBackgroundTimer())
+            {
+                SwitchBackgroundColor();
+            }
+        }
+        else if (GameManager.instance.state == EnumStateScene.Level)
         {
             if (UpdateBackgroundTimer())
             {
