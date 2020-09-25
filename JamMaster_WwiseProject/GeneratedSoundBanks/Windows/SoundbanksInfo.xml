@@ -82,6 +82,7 @@
 					</IncludedMemoryFiles>
 				</Event>
 				<Event Id="3346619540" Name="Resume_Musique" ObjectPath="\Events\Default Work Unit\Resume_Musique" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3036807465" Name="Stop_Musique" ObjectPath="\Events\Default Work Unit\Stop_Musique" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="33366193" Language="SFX">
